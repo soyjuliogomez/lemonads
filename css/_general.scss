@@ -1,6 +1,7 @@
 $color-primary-00: #8A2DFC;
 $color-primary-10: #7024CC;
 $color-primary-20: #5F1FAD;
+$color-primary-80: #2D0F52; 
 
 $neutral-light-00: #FFFFFF;
 
@@ -105,7 +106,7 @@ $9xl: 176; */
 .display {
   width: 100vw;
   color: $text-body-primary;
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 4.5rem;
   
   line-height: 120%;
@@ -194,10 +195,10 @@ $9xl: 176; */
 
 .h1__page {
   color: #FFFFEE;
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 3rem;
   text-align: center;
-  line-height: 140%;
+  line-height: 120%;
 
 
 
@@ -237,9 +238,9 @@ $9xl: 176; */
   }
 }
 
-.paragraph {
+.body {
   color: $text-body-primary;
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
 
   &__large {
     
@@ -535,6 +536,41 @@ a {
       &:hover {
         background-color: $color-primary-10;
         color: #ffffff;
+        border-style:none;
+        
+      }
+  
+      &--width100 {
+        width: 100%;
+      }
+  
+      &--widthfit {
+        width: fit-content;
+      }
+
+      &--space {
+        display: flex;
+        gap: $x;
+        
+      }
+    }
+
+    &__ghost {
+  
+      /* box-sizing: border-box; */
+      text-decoration: none;
+  
+      border-radius: 2.5rem;
+      border-width: 0.125rem;
+      /* Cambiado de border-style a border-width */
+      border-style: solid;
+      /* Agregado border-style */
+      border-color: $neutral-light-00;
+      color: $neutral-light-00;
+  
+      &:hover {
+        background-color: $neutral-light-00;
+        color: $color-primary-10;
         border-style:none;
         
       }
