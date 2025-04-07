@@ -499,7 +499,7 @@ body {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      margin-top: 8rem;
+      margin-top: 5rem;
       gap: 0;
 
 
@@ -516,10 +516,20 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: baseline;
-        align-items: flex-start; // <-- ahora todo queda alineado a la izquierda
+        align-items: flex-start;
         gap: 0;
         text-align: left;
-        /* margin-top: 2rem; */
+        width: 680px;
+        background: rgba(255, 255, 255, 0.32);
+
+backdrop-filter: blur(36px);  
+
+        padding: 56px; // espacio interno
+        position: relative;
+        z-index: 2;
+        margin-left: -56px;
+        box-sizing: border-box; // asegura que padding no sume tamaño extra
+        border-radius: 32px;
 
         @media (max-width: 600px) {
           width: 100%;
@@ -573,7 +583,7 @@ body {
         .first-data {
           margin-top: 2rem;
           position: relative;
-          width: 38.75rem;
+          width: 500px;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -624,15 +634,19 @@ body {
         /* margin-top: 4.5rem; */
         display: flex;
         gap: 2rem;
-        /* overflow-x: hidden; // Permite el desplazamiento horizontal si el contenido es más ancho
+        overflow-x: hidden; // Permite el desplazamiento horizontal si el contenido es más ancho
                 overflow-y: hidden; // Evita el desplazamiento vertical */
-        /* position: relative; */
+        position: relative;
         height: auto; // Altura de las tarjetas
-        /* white-space: nowrap; */
+        white-space: nowrap;
         // Evita que las tarjetas se envuelvan
-        width: 500px; // Asegura que el contenedor ocupe todo el ancho disponible
-        /* cursor: grab; */
-
+        position: relative;
+        
+        margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+        cursor: grab;
+        z-index: 0;
 
 
 
@@ -647,7 +661,7 @@ body {
 
         .cardsWrapper {
           display: flex;
-          animation: scroll 20s linear infinite;
+          animation: scroll 60s linear infinite;
           margin-left: -10px; // Ajuste opcional para evitar cortes visibles
         }
 
@@ -660,11 +674,11 @@ body {
           border-radius: 1.5rem;
           overflow: hidden;
           text-align: center;
-          
+
           display: flex;
           flex-direction: column; // Para alinear la imagen y la información verticalmente
           position: relative;
-          animation: slide 10s linear infinite;
+          animation: slide 28s linear infinite;
 
           @media (max-width: 600px) {
             min-width: 10.1875rem;
@@ -712,6 +726,7 @@ body {
               bottom: 0px;
               padding: 12px;
             }
+
             p {
               color: #10CC4F;
               font-size: 28px;
@@ -785,7 +800,7 @@ body {
         }
 
         to {
-          transform: translateX(-100%);
+          transform: translateX(-100vw);
         }
       }
     }
@@ -817,34 +832,82 @@ body {
     justify-content: center;
     align-items: center;
     width: $site-width;
+
+    .compraBitcoin {
+      color: $neutral-dark-40;
+
+      color: $color-primary-80;
+      text-align: center;
+      margin-bottom: 2rem;
+
+      @media (max-width: 37.5rem) {
+        font-size: 1.875rem;
+      }
+    }
+
     .slider-tabs {
       display: flex;
       justify-content: center;
       margin-bottom: 2rem;
-  
+
       .tab {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         border: 1px solid #ccc;
-        padding: 0.5rem 1rem;
+        padding: 16px 24px 16px 16px;
         margin: 0 0.5rem;
         border-radius: 30px;
         cursor: pointer;
+        color: $neutral-dark-40;
         background: #fff;
         transition: all 0.3s ease;
-  
+        height: 60px;
+        font-size: 16px;
+        font-weight: 600;
+        gap: 12px;
+        border-width: 2px;
+        border-color: $neutral-light-purple-30;
+
+        &:hover {
+          color: $neutral-dark-40;
+          border-style: solid;
+          border-width: 2px;
+          background-color: $neutral-light-purple-20;
+          /* border-width: 1px; */
+          border-color: $neutral-light-purple-40;
+        }
+
         &.active {
-          border-color: #7b2ff7;
-          color: #7b2ff7;
-          font-weight: bold;
+          background: $color-primary-80;
+          color: $neutral-light-00;
+          font-weight: 600;
+          border-style: none;
+        }
+
+        span {
+          display: flex;
+          /* flex-direction: row; */
+          justify-content: center;
+          align-items: center;
+          width: 28px;
+          height: 28px;
+          margin: 0 auto;
+          color: $neutral-dark-40;
+          padding: 10px;
+          border-radius: 32px;
+          background: $neutral-light-00;
         }
       }
     }
-  
+
     .slider {
       width: 100%;
       position: relative;
       overflow: hidden;
-       // ajustar según contenido
-      .sliderBackground1{
+
+      // ajustar según contenido
+      .sliderBackground1 {
         background: linear-gradient(to right, #5F5BF0, #8968FE);
         padding: 72px;
         border-radius: 32px;
@@ -854,17 +917,20 @@ body {
       .sliderBackground1 .slide-content p {
         color: $neutral-light-00;
       }
-      .sliderBackground2{
+
+      .sliderBackground2 {
         background: linear-gradient(to right, #B8B9F5 0%, #C7DFFD 50%, #E3F5B8 100%);
         padding: 72px;
         border-radius: 32px;
         height: 500px;
-        
+
       }
+
       .sliderBackground2 .slide-content h1 {
         color: $color-primary-80;
       }
-      .sliderBackground3{
+
+      .sliderBackground3 {
         background: linear-gradient(to right, #33245D, #5B40A8);
         padding: 72px;
         border-radius: 32px;
@@ -875,8 +941,8 @@ body {
         color: $neutral-light-00;
       }
 
-      
-  
+
+
       .slide {
         position: absolute;
         inset: 0;
@@ -886,37 +952,40 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        z-index: 1;
         /* padding: 2rem; */
-  
+
         &.active {
           opacity: 1;
-    position: relative;
-    pointer-events: auto;
+          position: relative;
+          pointer-events: auto;
+          z-index: 2;
         }
-  
+
         .slide-image {
           width: 40%; // Ajustar tamaño de imagen
-          height: 200px;
-          background: #eee; // Aquí pones tu imagen con background-image
+          height: auto;
         }
-  
+
         .slide-content {
           width: 50%;
-  
+
           h1 {
             text-align: left;
           }
-  
+
           p {
             margin-top: 16px;
             margin-bottom: 1rem;
           }
+
           a {
             /* display:inline-block; */
             margin-top: 32px;
             max-width: fit-content;
-    
+
           }
+
           /* button {
             background: #7b2ff7;
             color: #fff;
@@ -926,14 +995,121 @@ body {
             cursor: pointer;
           } */
         }
+
+        .numero1-wrapper {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-60%, -50%);
+          overflow: hidden; // Esto es lo que genera la máscara
+          width: 300px; // Ajustás esto a lo que querés que se vea
+          height: 400px; // Altura del número
+          z-index: -1; // O lo que necesites
+          pointer-events: none;
+
+          .numero1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-60%, -50%);
+            z-index: 1;
+            pointer-events: none;
+
+            font-weight: 900;
+            font-family: "Inter", sans-serif;
+            font-size: 400px;
+            color: transparent;
+            -webkit-text-stroke: 2px #ABFA00;
+
+            // Mascara fija con degradado
+            -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);
+            mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);
+
+            -webkit-mask-size: 100% 100%;
+            mask-size: 100% 100%;
+
+          }
+        }
+
+        .numero2-wrapper {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          overflow: hidden; // Esto es lo que genera la máscara
+          width: 300px; // Ajustás esto a lo que querés que se vea
+          height: 400px; // Altura del número
+          z-index: -1; // O lo que necesites
+          pointer-events: none;
+
+          .numero2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-60%, -50%);
+            z-index: 1;
+            pointer-events: none;
+
+            font-weight: 900;
+            font-family: "Inter", sans-serif;
+            font-size: 400px;
+            color: transparent;
+            -webkit-text-stroke: 2px #ABFA00;
+
+            // Mascara fija con degradado
+            -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);
+            mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);
+
+            -webkit-mask-size: 100% 100%;
+            mask-size: 100% 100%;
+
+          }
+        }
+
+        .numero3-wrapper {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          overflow: hidden; // Esto es lo que genera la máscara
+          width: 300px; // Ajustás esto a lo que querés que se vea
+          height: 400px; // Altura del número
+          z-index: -1; // O lo que necesites
+          pointer-events: none;
+
+          .numero3 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-60%, -50%);
+            z-index: 1;
+            pointer-events: none;
+
+            font-weight: 900;
+            font-family: "Inter", sans-serif;
+            font-size: 400px;
+            color: transparent;
+            -webkit-text-stroke: 2px $color-primary-00;
+
+            // Mascara fija con degradado
+            -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);
+            mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);
+
+            -webkit-mask-size: 100% 100%;
+            mask-size: 100% 100%;
+
+          }
+        }
+
+
       }
     }
-  
+
     .slider-dots {
       display: flex;
       justify-content: center;
       margin-top: 2rem;
-  
+
       .dot {
         width: 16px;
         height: 16px;
@@ -942,13 +1118,13 @@ body {
         background: #ccc;
         position: relative;
         overflow: hidden;
-  
+
         &.active {
           width: 50px;
           border-radius: 32px;
           background: #7b2ff7;
           transition: width 0.4s ease;
-  
+
           &::after {
             content: "";
             position: absolute;
@@ -956,27 +1132,28 @@ body {
             top: 0;
             height: 100%;
             width: 100%;
-            background: rgba(255,255,255,0.3);
+            background: rgba(255, 255, 255, 0.3);
             animation: fadeBar 4s linear forwards;
           }
         }
       }
     }
   }
-  
+
   @keyframes fadeBar {
     from {
       width: 100%;
     }
+
     to {
       width: 0%;
     }
   }
-  
-  
-  
-  
-  /* fin slider */  
+
+
+
+
+  /* fin slider */
 
   .hrcontainer {
     width: 1076px;

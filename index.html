@@ -14,12 +14,13 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Estelllar</title>
+  <title>Uvaswap</title>
   <link href="styles.css" rel="stylesheet" />
   <link href="styles.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="icon" href="./image/favicon.png" type="image/x-icon">
+  <link rel="icon" href="./image/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="./image/favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -205,29 +206,39 @@
     </section>
     <!-- inicio del slider -->
     <div class="slider-section">
+      <h1 class="h1__page h1__page--section h1__page--aligncenter compraBitcoin">
+        Compra Bitcoin en 3 Simples Pasos
+      </h1>
       <!-- Tabs arriba -->
       <div class="slider-tabs">
-        <button data-slide="0" class="tab active">1 Habla con un Representante</button>
-        <button data-slide="1" class="tab">2 Deposita con Confianza</button>
-        <button data-slide="2" class="tab">3 Te Lo Enviamos</button>
+        <button data-slide="0" class="tab active"> <span>1</span> Habla con un Representante</button>
+        <button data-slide="1" class="tab"><span>2</span> Deposita con Confianza</button>
+        <button data-slide="2" class="tab"><span>3</span> Te Lo Enviamos</button>
       </div>
     
       <!-- Contenedor del slider -->
       <div class="slider">
         <!-- Slide 1 -->
         <div class="slide active sliderBackground1">
-          <div class="slide-image"><!-- Imagen decorativa aquí --></div>
+          <div class="slide-image">
+            <img class="avatar-img" src="./image/illustrationCompra1.svg" alt="Diego Espinosa9">
+          </div>
           <div class="slide-content">
             
             <h1 class="h1__page">Habla con un Representante para Asesoramiento Personalizado</h1>
             <p class="body">Obtén soporte personalizado para tu compra de Bitcoin.</p>
             <a class="button button__ghost">Empieza en Segundos &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
           </div>
+          <div class="numero1-wrapper">
+            <span class="numero1">1</span>
+          </div>
         </div>
     
         <!-- Slide 2 -->
         <div class="slide sliderBackground2">
-          <div class="slide-image"><!-- Imagen decorativa aquí --></div>
+          <div class="slide-image">
+            <img class="avatar-img" src="./image/illustrationCompra2.svg" alt="imagenCompra2">
+          </div>
           <div class="slide-content">
             <h1 class="h1__page">Deposita con Confianza Pago Seguro y Sin Complicaciones</h1>
            
@@ -235,17 +246,26 @@
             <a class="button button__primary" onclick="scrollToData()">Comenzar Ahora &nbsp;<i
               class="fa-solid fa-arrow-right"></i></a>
           </div>
+          <div class="numero2-wrapper">
+            <span class="numero2">2</span>
+          </div>
         </div>
     
         <!-- Slide 3 -->
         <div class="slide sliderBackground3">
-          <div class="slide-image"><!-- Imagen decorativa aquí --></div>
+          <div class="slide-image">
+            <img class="avatar-img" src="./image/illustrationCompra3.svg" alt="imagenCompra3">
+          </div>
           <div class="slide-content">
             <h1 class="h1__page">Te Lo Enviamos, Bitcoin Directo a Tu Billetera</h1>
             <p class="body">Recibe tus Bitcoins de manera rápida y segura en tu billetera.</p>
             <a class="button button__ghost">Deposita y recibe &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
           </div>
+          <div class="numero3-wrapper">
+            <span class="numero3">3</span>
+          </div>
         </div>
+        
       </div>
     
       <!-- Controlador (Dots) -->

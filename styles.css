@@ -830,7 +830,7 @@ body {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      margin-top: 8rem;
+      margin-top: 5rem;
       gap: 0; }
       body main .hero_image section {
         width: 48%; }
@@ -845,7 +845,15 @@ body {
         align-items: flex-start;
         gap: 0;
         text-align: left;
-        /* margin-top: 2rem; */ }
+        width: 680px;
+        background: rgba(255, 255, 255, 0.32);
+        backdrop-filter: blur(36px);
+        padding: 56px;
+        position: relative;
+        z-index: 2;
+        margin-left: -56px;
+        box-sizing: border-box;
+        border-radius: 32px; }
         @media (max-width: 600px) {
           body main .hero_image .hero_image_container {
             width: 100%;
@@ -881,7 +889,7 @@ body {
         body main .hero_image .hero_image_container .first-data {
           margin-top: 2rem;
           position: relative;
-          width: 38.75rem;
+          width: 500px;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -919,13 +927,17 @@ body {
         /* margin-top: 4.5rem; */
         display: flex;
         gap: 2rem;
-        /* overflow-x: hidden; // Permite el desplazamiento horizontal si el contenido es más ancho
-                overflow-y: hidden; // Evita el desplazamiento vertical */
-        /* position: relative; */
+        overflow-x: hidden;
+        overflow-y: hidden;
+        position: relative;
         height: auto;
-        /* white-space: nowrap; */
-        width: 500px;
-        /* cursor: grab; */ }
+        white-space: nowrap;
+        position: relative;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        width: 100vw;
+        cursor: grab;
+        z-index: 0; }
         @media (max-width: 37.5rem) {
           body main .hero_image .avatarImageCards {
             width: 100vw;
@@ -934,7 +946,7 @@ body {
           cursor: grabbing; }
         body main .hero_image .avatarImageCards .cardsWrapper {
           display: flex;
-          animation: scroll 20s linear infinite;
+          animation: scroll 60s linear infinite;
           margin-left: -10px; }
         body main .hero_image .avatarImageCards .cardAvatar {
           min-width: 420px;
@@ -945,7 +957,7 @@ body {
           display: flex;
           flex-direction: column;
           position: relative;
-          animation: slide 10s linear infinite; }
+          animation: slide 28s linear infinite; }
           @media (max-width: 600px) {
             body main .hero_image .avatarImageCards .cardAvatar {
               min-width: 10.1875rem;
@@ -1018,7 +1030,7 @@ body {
   from {
     transform: translateX(100%); }
   to {
-    transform: translateX(-100%); } }
+    transform: translateX(-100vw); } }
   body .sponsors {
     /* padding: 120px; */
     margin: 12rem 0rem 0rem 0rem;
@@ -1036,22 +1048,60 @@ body {
     justify-content: center;
     align-items: center;
     width: 1200px; }
+    body .slider-section .compraBitcoin {
+      color: #464852;
+      color: #2D0F52;
+      text-align: center;
+      margin-bottom: 2rem; }
+      @media (max-width: 37.5rem) {
+        body .slider-section .compraBitcoin {
+          font-size: 1.875rem; } }
     body .slider-section .slider-tabs {
       display: flex;
       justify-content: center;
       margin-bottom: 2rem; }
       body .slider-section .slider-tabs .tab {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         border: 1px solid #ccc;
-        padding: 0.5rem 1rem;
+        padding: 16px 24px 16px 16px;
         margin: 0 0.5rem;
         border-radius: 30px;
         cursor: pointer;
+        color: #464852;
         background: #fff;
-        transition: all 0.3s ease; }
+        transition: all 0.3s ease;
+        height: 60px;
+        font-size: 16px;
+        font-weight: 600;
+        gap: 12px;
+        border-width: 2px;
+        border-color: #E5EDFC; }
+        body .slider-section .slider-tabs .tab:hover {
+          color: #464852;
+          border-style: solid;
+          border-width: 2px;
+          background-color: #F0F4FC;
+          /* border-width: 1px; */
+          border-color: #D6E3FC; }
         body .slider-section .slider-tabs .tab.active {
-          border-color: #7b2ff7;
-          color: #7b2ff7;
-          font-weight: bold; }
+          background: #2D0F52;
+          color: #FFFFFF;
+          font-weight: 600;
+          border-style: none; }
+        body .slider-section .slider-tabs .tab span {
+          display: flex;
+          /* flex-direction: row; */
+          justify-content: center;
+          align-items: center;
+          width: 28px;
+          height: 28px;
+          margin: 0 auto;
+          color: #464852;
+          padding: 10px;
+          border-radius: 32px;
+          background: #FFFFFF; }
     body .slider-section .slider {
       width: 100%;
       position: relative;
@@ -1086,15 +1136,16 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        z-index: 1;
         /* padding: 2rem; */ }
         body .slider-section .slider .slide.active {
           opacity: 1;
           position: relative;
-          pointer-events: auto; }
+          pointer-events: auto;
+          z-index: 2; }
         body .slider-section .slider .slide .slide-image {
           width: 40%;
-          height: 200px;
-          background: #eee; }
+          height: auto; }
         body .slider-section .slider .slide .slide-content {
           width: 50%;
           /* button {
@@ -1114,6 +1165,84 @@ body {
             /* display:inline-block; */
             margin-top: 32px;
             max-width: fit-content; }
+        body .slider-section .slider .slide .numero1-wrapper {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-60%, -50%);
+          overflow: hidden;
+          width: 300px;
+          height: 400px;
+          z-index: -1;
+          pointer-events: none; }
+          body .slider-section .slider .slide .numero1-wrapper .numero1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-60%, -50%);
+            z-index: 1;
+            pointer-events: none;
+            font-weight: 900;
+            font-family: "Inter", sans-serif;
+            font-size: 400px;
+            color: transparent;
+            -webkit-text-stroke: 2px #ABFA00;
+            -webkit-mask-image: linear-gradient(to left, black 40%, rgba(0, 0, 0, 0) 100%);
+            mask-image: linear-gradient(to right, black 40%, rgba(0, 0, 0, 0) 100%);
+            -webkit-mask-size: 100% 100%;
+            mask-size: 100% 100%; }
+        body .slider-section .slider .slide .numero2-wrapper {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          overflow: hidden;
+          width: 300px;
+          height: 400px;
+          z-index: -1;
+          pointer-events: none; }
+          body .slider-section .slider .slide .numero2-wrapper .numero2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-60%, -50%);
+            z-index: 1;
+            pointer-events: none;
+            font-weight: 900;
+            font-family: "Inter", sans-serif;
+            font-size: 400px;
+            color: transparent;
+            -webkit-text-stroke: 2px #ABFA00;
+            -webkit-mask-image: linear-gradient(to left, black 40%, rgba(0, 0, 0, 0) 100%);
+            mask-image: linear-gradient(to right, black 40%, rgba(0, 0, 0, 0) 100%);
+            -webkit-mask-size: 100% 100%;
+            mask-size: 100% 100%; }
+        body .slider-section .slider .slide .numero3-wrapper {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          overflow: hidden;
+          width: 300px;
+          height: 400px;
+          z-index: -1;
+          pointer-events: none; }
+          body .slider-section .slider .slide .numero3-wrapper .numero3 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-60%, -50%);
+            z-index: 1;
+            pointer-events: none;
+            font-weight: 900;
+            font-family: "Inter", sans-serif;
+            font-size: 400px;
+            color: transparent;
+            -webkit-text-stroke: 2px #8A2DFC;
+            -webkit-mask-image: linear-gradient(to left, black 40%, rgba(0, 0, 0, 0) 100%);
+            mask-image: linear-gradient(to right, black 40%, rgba(0, 0, 0, 0) 100%);
+            -webkit-mask-size: 100% 100%;
+            mask-size: 100% 100%; }
     body .slider-section .slider-dots {
       display: flex;
       justify-content: center;
