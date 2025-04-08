@@ -20,10 +20,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="icon" href="./image/favicon.svg" type="image/svg+xml">
-<link rel="icon" href="./image/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="./image/favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
   <!-- "material symbols" -->
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -200,9 +202,16 @@
     </section>
     <section class="sponsors">
       <h1 class="h1__page h1__page--section h1__page--aligncenter">
-        Nuestros Patrocinadores
+        Recibe tus dólares en tu banco de Ecuador
       </h1>
-      <img class="sponsorImages" src="./image/sponsorLogos.svg" alt="Patrocinadores">
+      <div class="logosPatrocinadores">
+        <img class="sponsorImages" src="./image/banco1.svg" alt="logoBanco">
+        <img class="sponsorImages" src="./image/banco2.svg" alt="logoBanco">
+        <img class="sponsorImages" src="./image/banco3.svg" alt="logoBanco">
+        <img class="sponsorImages" src="./image/banco4.svg" alt="logoBanco">
+        <img class="sponsorImages" src="./image/banco5.svg" alt="logoBanco">
+        <img class="sponsorImages" src="./image/banco6.svg" alt="logoBanco">
+      </div>
     </section>
     <!-- inicio del slider -->
     <div class="slider-section">
@@ -215,7 +224,7 @@
         <button data-slide="1" class="tab"><span>2</span> Deposita con Confianza</button>
         <button data-slide="2" class="tab"><span>3</span> Te Lo Enviamos</button>
       </div>
-    
+
       <!-- Contenedor del slider -->
       <div class="slider">
         <!-- Slide 1 -->
@@ -224,7 +233,7 @@
             <img class="avatar-img" src="./image/illustrationCompra1.svg" alt="Diego Espinosa9">
           </div>
           <div class="slide-content">
-            
+
             <h1 class="h1__page">Habla con un Representante para Asesoramiento Personalizado</h1>
             <p class="body">Obtén soporte personalizado para tu compra de Bitcoin.</p>
             <a class="button button__ghost">Empieza en Segundos &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
@@ -233,7 +242,7 @@
             <span class="numero1">1</span>
           </div>
         </div>
-    
+
         <!-- Slide 2 -->
         <div class="slide sliderBackground2">
           <div class="slide-image">
@@ -241,16 +250,16 @@
           </div>
           <div class="slide-content">
             <h1 class="h1__page">Deposita con Confianza Pago Seguro y Sin Complicaciones</h1>
-           
+
             <p class="body">Realiza tu depósito de forma segura y confiable.</p>
             <a class="button button__primary" onclick="scrollToData()">Comenzar Ahora &nbsp;<i
-              class="fa-solid fa-arrow-right"></i></a>
+                class="fa-solid fa-arrow-right"></i></a>
           </div>
           <div class="numero2-wrapper">
             <span class="numero2">2</span>
           </div>
         </div>
-    
+
         <!-- Slide 3 -->
         <div class="slide sliderBackground3">
           <div class="slide-image">
@@ -265,9 +274,9 @@
             <span class="numero3">3</span>
           </div>
         </div>
-        
+
       </div>
-    
+
       <!-- Controlador (Dots) -->
       <div class="slider-dots">
         <span class="dot active"></span>
@@ -275,10 +284,40 @@
         <span class="dot"></span>
       </div>
     </div>
-    
+
 
     <!-- Fin del slider -->
+    <div class="containerRecibe">
+      <h1 class="h1__page h1__page--section h1__page--alignleft">
+        Cambia Tus Cripto A Cualquier<br>
+        Banco En <span class="country"><img src="./image/ecuadorRecibeBandera.svg" alt="Bandera de Ecuador"
+            class="flag">Ecuador</span> En Solo 2 Pasos
+      </h1>
+      <div class="cardsParaRecibir">
+        <div class="card card-purple">
+          <div class="contenidoRecibir">
+            <h2 class="h1__page h1__page--section h1__page--aligncenter">Envía Tus Cripto 🚀</h2>
+            <p class="body__large">Transfiere El Monto A<br>Nuestra Billetera Segura.</p>
+            <a class="button button__ghost">Empieza en Segundos &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="card-image">
+            <img src="./image/imagenMujerEnviar.png" alt="Persona usando laptop para enviar cripto">
+          </div>
+        </div>
 
+        <div class="card card-green">
+          <div class="contenidoRecibir">
+            <h1 class="h1__page h1__page--section h1__page--aligncenter">Recibe En Tu Banco</h1>
+            <p class="body__large">Te Enviamos El Dinero<br>Directamente A Tu Cuenta Local</p>
+            <a class="button button__secondary" onclick="scrollToData()">Comenzar Ahora &nbsp;<i
+                class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="card-image">
+            <img src="./image/imagenMujerRecibir.svg" alt="Persona recibiendo dinero en el banco con notificaciones">
+          </div>
+        </div>
+      </div>
+    </div>
     <section class="why">
       <p class="label__page label__page--right">Lorem ipsum</p>
 
@@ -458,35 +497,35 @@
   <!-- script slider -->
   <script>
     const slides = document.querySelectorAll('.slide');
-const tabs = document.querySelectorAll('.tab');
-const dots = document.querySelectorAll('.dot');
+    const tabs = document.querySelectorAll('.tab');
+    const dots = document.querySelectorAll('.dot');
 
-let currentSlide = 0;
-let interval = setInterval(nextSlide, 4000);
+    let currentSlide = 0;
+    let interval = setInterval(nextSlide, 4000);
 
-function showSlide(index) {
-  slides.forEach(slide => slide.classList.remove('active'));
-  tabs.forEach(tab => tab.classList.remove('active'));
-  dots.forEach(dot => dot.classList.remove('active'));
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      tabs.forEach(tab => tab.classList.remove('active'));
+      dots.forEach(dot => dot.classList.remove('active'));
 
-  slides[index].classList.add('active');
-  tabs[index].classList.add('active');
-  dots[index].classList.add('active');
-}
+      slides[index].classList.add('active');
+      tabs[index].classList.add('active');
+      dots[index].classList.add('active');
+    }
 
-function nextSlide() {
-  currentSlide = (currentSlide + 1) % slides.length;
-  showSlide(currentSlide);
-}
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
 
-tabs.forEach((tab, index) => {
-  tab.addEventListener('click', () => {
-    clearInterval(interval);
-    currentSlide = index;
-    showSlide(currentSlide);
-    interval = setInterval(nextSlide, 4000);
-  });
-});
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => {
+        clearInterval(interval);
+        currentSlide = index;
+        showSlide(currentSlide);
+        interval = setInterval(nextSlide, 4000);
+      });
+    });
 
 
   </script>
