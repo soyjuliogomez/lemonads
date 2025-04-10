@@ -249,7 +249,7 @@
             <img class="avatar-img" src="./image/illustrationCompra2.svg" alt="imagenCompra2">
           </div>
           <div class="slide-content">
-            <h1 class="h1__page">Deposita con Confianza Pago Seguro y Sin Complicaciones</h1>
+            <h1 class="h1__page">Deposita con ConfianzaPago Seguro y Sin Complicaciones</h1>
 
             <p class="body">Realiza tu depósito de forma segura y confiable.</p>
             <a class="button button__primary" onclick="scrollToData()">Comenzar Ahora &nbsp;<i
@@ -287,6 +287,8 @@
 
 
     <!-- Fin del slider -->
+
+    <!-- Inicio seccion recibe -->
     <div class="containerRecibe">
       <h1 class="h1__page h1__page--section h1__page--alignleft">
         Cambia Tus Cripto A Cualquier<br>
@@ -318,6 +320,196 @@
         </div>
       </div>
     </div>
+    <!-- Fin de 2 secciones recibe -->
+
+    <div class="cardLogosDeBancoConUvaswap">
+      <img class="bancosLeft" src="./image/left.svg" alt="logoBanco">
+      <div class="logoLeftNewContainer">
+        <div class="logoLeftNew1">
+          <div class="logoImagesCircle">
+            <img class="logoLeftNew" src="./image/bancoInternacionalAnimation.svg" alt="logoBanco">
+          </div>
+
+          <div class="logoImagesCircle logoBancoJepMargin">
+            <img class="logoLeftNew" src="./image/bancoJepAnimation.svg" alt="logoBancoJep">
+          </div>
+
+          <div class="logoImagesCircle">
+            <img class="logoLeftNew" src="./image/bancoAustroAnimation.svg" alt="logoBanco">
+          </div>
+
+        </div>
+        <div class="logoLeftNew2">
+          <div class="logoImagesCircle">
+            <img class="logoLeftNew" src="./image/bancoPichinchaAnimation.svg" alt="logoBanco">
+          </div>
+
+          <div class="logoImagesCircle">
+            <img class="logoLeftNew" src="./image/bancoPacificoAnimation.svg" alt="logoBanco">
+          </div>
+
+
+
+
+        </div>
+
+      </div>
+      <div class="logoUvaswapAnimacion pulse-glow">
+        <div class="uvaswapImagenContainer">
+          <img class="mainLogoSend" src="./image/uvaswapLogoEnviarAnimation.svg" alt="logoBanco">
+        </div>
+      </div>
+      <div class="logoRightNewContainer">
+        <div class="logoRightNew2">
+          <div class="logoImagesCircle">
+            <img class="logoLeftNew" src="./image/bancoGuayaquilAnimation.svg" alt="logoBanco">
+          </div>
+
+          <div class="logoImagesCircle">
+            <img class="logoLeftNew" src="./image/bancoBolivarianolAnimation.svg" alt="logoBanco">
+          </div>
+
+
+
+
+        </div>
+        <div class="logoRightNew1">
+          <div class="logoImagesCircle">
+            <img class="logoLeftNew" src="./image/bancoMutualistaAnimation.svg" alt="logoBanco">
+          </div>
+
+          <div class="logoImagesCircle logoBancoRightMargin">
+            <img class="logoLeftNew" src="./image/bancoProCreditAnimation.svg" alt="logoBancoJep">
+          </div>
+
+          <div class="logoImagesCircle">
+            <img class="logoLeftNew" src="./image/bancoProdubancoAnimation.svg" alt="logoBanco">
+          </div>
+
+        </div>
+        
+
+      </div>
+      <!-- <img class="bancoRight" src="./image/right.svg" alt="logoBanco"> -->
+      <div class="moving-line-container"> <!--  style="width: 523px; height: 322px;" -->
+        <svg width="100%" height="100%" viewBox="0 0 523 322" xmlns="http://www.w3.org/2000/svg">
+          <!-- Definiciones de animaciones y estilos -->
+          <defs>
+            <!-- Define el color de la línea - Cambia el stop-color para modificar el color -->
+            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="transparent" stop-opacity="0" />
+              <!-- AQUÍ CAMBIAS EL COLOR DE LA LÍNEA - Modifica #6200EA por otro código de color -->
+              <stop offset="50%" stop-color="#8A2DFC" stop-opacity="1" />
+              <stop offset="100%" stop-color="transparent" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+
+          <!-- LÍNEA CURVA ANIMADA CON EXTREMOS REDONDEADOS -->
+          <!-- 
+            COORDENADAS IMPORTANTES:
+            - PUNTO DE INICIO: M523,160 (extremo derecho, a 160px desde arriba)
+            - PUNTO DE FIN: 50,80 (izquierda, a 80px desde arriba)
+            
+            Path explicado:
+            M523,160 = Coordenadas X,Y del PUNTO DE INICIO (donde comienza la línea)
+            Q300,260 = Punto de control que determina la curvatura
+            50,80 = Coordenadas X,Y del PUNTO FINAL (donde termina la línea)
+            
+            PARA MODIFICAR LA UBICACIÓN DE LOS PUNTOS:
+            - Para mover el PUNTO DE INICIO: cambia "M523,160" (X,Y)
+            - Para mover el PUNTO FINAL: cambia "50,80" (X,Y)
+          -->
+
+          <!-- banco internacional -->
+          <path d="M496,130 Q100,200 50,0" fill="none" stroke-width="3" stroke="url(#gradient)" stroke-dasharray="12"
+            stroke-dashoffset="0" /* LÍNEAS REDONDEADAS - Este atributo hace que los extremos sean redondos */
+            stroke-linecap="round">
+            <animate attributeName="stroke-dashoffset" from="0" to="-220" dur="1.7s" repeatCount="indefinite" />
+          </path>
+
+          <!-- banco del austro -->
+          <path d="M496,190 Q20,100 0,440" fill="none" stroke-width="3" stroke="url(#gradient)" stroke-dasharray="12"
+            stroke-dashoffset="0" /* LÍNEAS REDONDEADAS - Este atributo hace que los extremos sean redondos */
+            stroke-linecap="round">
+            <animate attributeName="stroke-dashoffset" from="0" to="-220" dur="1.7s" repeatCount="indefinite" />
+          </path>
+
+          <!-- linea banco del pacifico -->
+          <path d="M496,160 Q300,40 150,318" fill="none" stroke-width="3" stroke="url(#gradient)" stroke-dasharray="12"
+            stroke-dashoffset="0" /* LÍNEAS REDONDEADAS - Este atributo hace que los extremos sean redondos */
+            stroke-linecap="round">
+            <animate attributeName="stroke-dashoffset" from="0" to="-220" dur="1.7s" repeatCount="indefinite" />
+          </path>
+          <!-- linea banco pichincha -->
+          <path d="M496,160 Q300,280 150,2" fill="none" stroke-width="3" stroke="url(#gradient)" stroke-dasharray="12"
+            stroke-dashoffset="0" /* LÍNEAS REDONDEADAS - Este atributo hace que los extremos sean redondos */
+            stroke-linecap="round">
+            <animate attributeName="stroke-dashoffset" from="0" to="-220" dur="1.7s" repeatCount="indefinite" />
+          </path>
+          <!-- banco JEP -->
+          <path d="M496,160 L0,161" fill="none" stroke-width="3" stroke="url(#gradient)" stroke-dasharray="12"
+            stroke-dashoffset="0" stroke-linecap="round">
+            <animate attributeName="stroke-dashoffset" from="0" to="-220" dur="1.7s" repeatCount="indefinite" />
+          </path>
+        </svg>
+      </div>
+      <!-- fin lineas dentro del contenedor de logos de bancos y uvaswap -->
+
+      <!-- Lineas dirigiendose a la derecha -->
+      <div class="moving-line-container-right">
+        <svg width="100%" height="100%" viewBox="0 0 523 322" xmlns="http://www.w3.org/2000/svg">
+          <!-- Definiciones de animaciones y estilos -->
+          <defs>
+            <!-- Define el color de la línea con gradiente invertido -->
+            <linearGradient id="gradient-right" x1="100%" y1="0%" x2="0%" y2="0%">
+              <stop offset="0%" stop-color="transparent" stop-opacity="0" />
+              <stop offset="50%" stop-color="#8A2DFC" stop-opacity="1" />
+              <stop offset="100%" stop-color="transparent" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+      
+          <!-- Líneas espejadas horizontalmente -->
+          
+          <!-- banco internacional (espejado) -->
+          <path d="M27,130 Q423,200 473,0" fill="none" stroke-width="3" stroke="url(#gradient-right)" stroke-dasharray="12"
+            stroke-dashoffset="0" stroke-linecap="round">
+            <animate attributeName="stroke-dashoffset" from="220" to="0" dur="1.7s" repeatCount="indefinite" />
+          </path>
+      
+          <!-- banco del austro (espejado) -->
+          <path d="M27,190 Q503,100 523,440" fill="none" stroke-width="3" stroke="url(#gradient-right)" stroke-dasharray="12"
+            stroke-dashoffset="0" stroke-linecap="round">
+            <animate attributeName="stroke-dashoffset" from="220" to="0" dur="1.7s" repeatCount="indefinite" />
+          </path>
+      
+          <!-- linea banco del pacifico (espejado) -->
+          <path d="M27,160 Q223,40 373,318" fill="none" stroke-width="3" stroke="url(#gradient-right)" stroke-dasharray="12"
+            stroke-dashoffset="0" stroke-linecap="round">
+            <animate attributeName="stroke-dashoffset" from="220" to="0" dur="1.7s" repeatCount="indefinite" />
+          </path>
+          
+          <!-- linea banco pichincha (espejado) -->
+          <path d="M27,160 Q223,280 373,2" fill="none" stroke-width="3" stroke="url(#gradient-right)" stroke-dasharray="12"
+            stroke-dashoffset="0" stroke-linecap="round">
+            <animate attributeName="stroke-dashoffset" from="220" to="0" dur="1.7s" repeatCount="indefinite" />
+          </path>
+          
+          <!-- banco JEP (espejado) -->
+          <path d="M27,160 L523,161" fill="none" stroke-width="3" stroke="url(#gradient-right)" stroke-dasharray="12"
+            stroke-dashoffset="0" stroke-linecap="round">
+            <animate attributeName="stroke-dashoffset" from="220" to="0" dur="1.7s" repeatCount="indefinite" />
+          </path>
+        </svg>
+      </div>
+      <!-- fin lineas dirigiendose a la derecha -->
+
+    </div>
+
+
+
+    <!-- lineas segundas -->
+
+    <!-- lineas segundas fin -->
     <section class="why">
       <p class="label__page label__page--right">Lorem ipsum</p>
 
@@ -530,6 +722,68 @@
 
   </script>
   <!-- fin script slider -->
+
+  
+<!-- inicio cambio de imagenes -->
+  <!-- <script>
+// Esperar a que el documento esté cargado
+document.addEventListener("DOMContentLoaded", function() {
+  // Seleccionar todos los elementos de imagen
+  const logos = document.querySelectorAll('.logoLeftNew');
+  
+  // Guardar las rutas originales de las imágenes
+  const originalSources = Array.from(logos).map(logo => logo.src);
+  
+  // Configuración de la animación
+  const animationDuration = 3000; // 3 segundos
+  
+  // Función para animar la transición
+  function animateLogos() {
+    // Hacer que los logos se desvanezcan
+    logos.forEach(logo => {
+      logo.style.transition = 'opacity 0.5s ease';
+      logo.style.opacity = '0';
+    });
+    
+    // Después de desvanecerse, cambiar las fuentes
+    setTimeout(() => {
+      // Rotar las fuentes (mover la primera al final)
+      const firstSource = originalSources.shift();
+      originalSources.push(firstSource);
+      
+      // Asignar nuevas fuentes
+      logos.forEach((logo, index) => {
+        logo.src = originalSources[index];
+      });
+      
+      // Hacer que los logos aparezcan de nuevo
+      setTimeout(() => {
+        logos.forEach(logo => {
+          logo.style.opacity = '1';
+        });
+      }, 100);
+      
+    }, 500);
+  }
+  
+  // Iniciar la animación a intervalos regulares
+  setInterval(animateLogos, animationDuration);
+  
+  // Opcional: añadir también efectos de transición de escala al contenedor
+  const containers = document.querySelectorAll('.logoImagesCircle');
+  containers.forEach(container => {
+    container.style.transition = 'transform 0.5s ease';
+    
+    // Añadir un pequeño efecto de escala durante la transición
+    setInterval(() => {
+      container.style.transform = 'scale(1.05)';
+      setTimeout(() => {
+        container.style.transform = 'scale(1)';
+      }, 500);
+    }, animationDuration);
+  });
+});
+  </script> -->
 
 </body>
 
