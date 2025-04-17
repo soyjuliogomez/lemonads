@@ -182,6 +182,34 @@ Font
   .h2__page--alignleft {
     text-align: left; }
 
+.h4__page {
+  color: #ffffee;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 140%;
+  font-weight: 500; }
+  @media (max-width: 600px) {
+    .h4__page {
+      font-size: 32px; } }
+  .h4__page--section {
+    margin-top: 1rem; }
+  .h4__page--alignleft {
+    text-align: left; }
+
+.h5__page {
+  color: #ffffee;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  line-height: 140%;
+  font-weight: 500; }
+  @media (max-width: 600px) {
+    .h5__page {
+      font-size: 32px; } }
+  .h5__page--section {
+    margin-top: 1rem; }
+  .h5__page--alignleft {
+    text-align: left; }
+
 .body {
   color: #2D0F52;
   font-family: "Inter", sans-serif; }
@@ -418,6 +446,22 @@ outline-offset: 5px; */
       background-color: #FFFFFF;
       color: #7024CC;
       border-style: none; }
+    .button__ghost--small {
+      font-size: 14px;
+      font-weight: 500;
+      height: 32px;
+      padding: 0px 16px;
+      border-radius: 2.5rem;
+      border-width: 1px;
+      /* Cambiado de border-style a border-width */
+      border-style: solid;
+      /* Agregado border-style */
+      border-color: #FFFFFF;
+      color: #FFFFFF; }
+      .button__ghost--small:hover {
+        background-color: #FFFFFF;
+        color: #7024CC;
+        border-style: none; }
     .button__ghost--width100 {
       width: 100%; }
     .button__ghost--widthfit {
@@ -1590,51 +1634,80 @@ body {
           padding: 16px 16px; } }
   body .footer {
     display: flex;
-    width: 100vw;
-    /* max-width: 1076px; */
-    justify-content: center;
-    align-items: center;
+    width: 1200px;
+    padding: 72px 72px 0px 72px;
     flex-direction: column;
-    margin: 0 auto;
-    align-items: center;
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 11rem; }
-    @media (max-width: 600px) {
-      body .footer {
-        max-width: 100vw; } }
-    body .footer .logo-footer {
-      display: block;
-      margin: 0 auto; }
-    body .footer .footer-social-media {
+    align-items: flex-start;
+    gap: 48px;
+    border-radius: 44px;
+    background: linear-gradient(0deg, #241943 1.31%, #302159 100%);
+    margin-bottom: 96px; }
+    body .footer .logoAndMenu {
       display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      align-self: stretch; }
+      body .footer .logoAndMenu .footerRightMenu {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        gap: 44px; }
+        body .footer .logoAndMenu .footerRightMenu .menuFooter {
+          width: max-content;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 8px; }
+          body .footer .logoAndMenu .footerRightMenu .menuFooter h4 {
+            margin-bottom: 12px; }
+        body .footer .logoAndMenu .footerRightMenu .appButtons {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 8px; }
+          body .footer .logoAndMenu .footerRightMenu .appButtons h4 {
+            margin-bottom: 12px; }
+          body .footer .logoAndMenu .footerRightMenu .appButtons .app-store-button,
+          body .footer .logoAndMenu .footerRightMenu .appButtons .play-store-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            height: 40px;
+            padding: 0 32px;
+            background: #FFFFFF;
+            color: #2D0F52;
+            border: none;
+            border-radius: 999px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.3s ease, color 0.3s ease; }
+            body .footer .logoAndMenu .footerRightMenu .appButtons .app-store-button .icon,
+            body .footer .logoAndMenu .footerRightMenu .appButtons .play-store-button .icon {
+              display: flex;
+              align-items: center; }
+              body .footer .logoAndMenu .footerRightMenu .appButtons .app-store-button .icon svg,
+              body .footer .logoAndMenu .footerRightMenu .appButtons .play-store-button .icon svg {
+                transition: fill 0.3s ease; }
+            body .footer .logoAndMenu .footerRightMenu .appButtons .app-store-button:hover,
+            body .footer .logoAndMenu .footerRightMenu .appButtons .play-store-button:hover {
+              background: #E5EDFC;
+              color: #8A2DFC; }
+    body .footer .copyright {
+      display: flex;
+      padding: 12px 0px;
+      justify-content: space-between;
       align-items: center;
-      gap: 0.5rem; }
-  body .background-footer {
-    display: block block;
-    width: 100%;
-    position: relative;
-    bottom: 0; }
-    @media (max-width: 600px) {
-      body .background-footer {
-        max-width: 100vw; } }
-
-#messageContainer {
-  display: none;
-  background: white;
-  padding: 0.9375rem;
-  color: #000019;
-  width: 100%;
-  text-align: center;
-  font-weight: bold;
-  margin: 1.25rem 0;
-  border-radius: 0.625rem; }
-  #messageContainer #spinner {
-    display: none; }
-  #messageContainer .success-message {
-    color: green; }
-  #messageContainer .error-message {
-    color: red; }
+      align-self: stretch;
+      border-top: 1px solid var(--primary-20, #5F1FAD);
+      border-bottom: 1px solid var(--primary-20, #5F1FAD); }
+      body .footer .copyright p {
+        font-size: 12px;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        color: #D6E3FC; }
+    body .footer .logoFooterLarge img {
+      width: 100%; }
 
 #registrationForm {
   width: 100%; }
