@@ -1566,6 +1566,9 @@ body {
         flex-direction: column;
         justify-content: space-between;
         gap: 56px; }
+        body .cardLogosDeBancoConUvaswap .logoLeftNewContainer .logoLeftNew1 .logoSectionHidden,
+        body .cardLogosDeBancoConUvaswap .logoLeftNewContainer .logoLeftNew2 .logoSectionHidden {
+          display: none; }
         body .cardLogosDeBancoConUvaswap .logoLeftNewContainer .logoLeftNew1 .logoBancoJepMargin,
         body .cardLogosDeBancoConUvaswap .logoLeftNewContainer .logoLeftNew2 .logoBancoJepMargin {
           margin-left: -36px; }
@@ -1598,6 +1601,9 @@ body {
         flex-direction: column;
         justify-content: space-between;
         gap: 56px; }
+        body .cardLogosDeBancoConUvaswap .logoRightNewContainer .logoRightNew1 .logoSectionHidden,
+        body .cardLogosDeBancoConUvaswap .logoRightNewContainer .logoRightNew2 .logoSectionHidden {
+          display: none; }
         body .cardLogosDeBancoConUvaswap .logoRightNewContainer .logoRightNew1 .logoImagesCircle,
         body .cardLogosDeBancoConUvaswap .logoRightNewContainer .logoRightNew2 .logoImagesCircle {
           display: flex;
@@ -1620,6 +1626,11 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     margin: 120px 0;
+    /* codigo sin organizar de AI */
+    /* Añade estos estilos para mejorar la visualización de la animación */
+    /* Estilo para los números que se animarán */
+    /* Efecto de resaltado durante la animación */
+    /* fin de codigo sin organizar de AI */
   /* @media (max-width: 1024px) {
   flex-direction: column;
   
@@ -1639,6 +1650,19 @@ body {
     grid-template-columns: 1fr;
   }
 } */ }
+    body .volumenDeUvaswap .volumenDeUvaswap {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease; }
+    body .volumenDeUvaswap .volumenDeUvaswap.visible {
+      opacity: 1;
+      transform: translateY(0); }
+    body .volumenDeUvaswap .volumenNumerosGrandeVerde,
+    body .volumenDeUvaswap .volumenNumerosGrande {
+      display: inline-block;
+      transition: color 0.3s ease; }
+    body .volumenDeUvaswap .animating {
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.5); }
     body .volumenDeUvaswap__texto {
       display: flex;
       width: 40%;

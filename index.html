@@ -328,24 +328,30 @@
         <div class="logoLeftNew1">
           <div class="logoImagesCircle">
             <img class="logoLeftNew" src="./image/bancoInternacionalAnimation.svg" alt="logoBanco">
+            <img class="logoSectionHidden" src="./image/animationLogos/avaxAnimation.svg" alt="logoBanco">
           </div>
+  
 
           <div class="logoImagesCircle logoBancoJepMargin">
             <img class="logoLeftNew" src="./image/bancoJepAnimation.svg" alt="logoBancoJep">
+            <img class="logoSectionHidden" src="./image/animationLogos/binanceAnimation.svg" alt="logoBanco">
           </div>
 
           <div class="logoImagesCircle">
             <img class="logoLeftNew" src="./image/bancoAustroAnimation.svg" alt="logoBanco">
+            <img class="logoSectionHidden" src="./image/animationLogos/bitcoinLogoAnimation.svg" alt="logoBanco">
           </div>
 
         </div>
         <div class="logoLeftNew2">
           <div class="logoImagesCircle">
             <img class="logoLeftNew" src="./image/bancoPichinchaAnimation.svg" alt="logoBanco">
+            <img class="logoSectionHidden" src="./image/animationLogos/coinbaseAnimation.svg" alt="logoBanco">
           </div>
 
           <div class="logoImagesCircle">
             <img class="logoLeftNew" src="./image/bancoPacificoAnimation.svg" alt="logoBanco">
+            <img class="logoSectionHidden" src="./image/animationLogos/etheriumAnimation.svg" alt="logoBanco">
           </div>
 
 
@@ -363,10 +369,12 @@
         <div class="logoRightNew2">
           <div class="logoImagesCircle">
             <img class="logoLeftNew" src="./image/bancoGuayaquilAnimation.svg" alt="logoBanco">
+            <img class="logoSectionHidden" src="./image/animationLogos/gateioAnimation.svg" alt="logoBanco">
           </div>
 
           <div class="logoImagesCircle">
             <img class="logoLeftNew" src="./image/bancoBolivarianolAnimation.svg" alt="logoBanco">
+            <img class="logoSectionHidden" src="./image/animationLogos/shibaAnimation.svg" alt="logoBanco">
           </div>
 
 
@@ -376,14 +384,17 @@
         <div class="logoRightNew1">
           <div class="logoImagesCircle">
             <img class="logoLeftNew" src="./image/bancoMutualistaAnimation.svg" alt="logoBanco">
+            <img class="logoSectionHidden" src="./image/animationLogos/solanaAnimation.svg" alt="logoBanco">
           </div>
 
           <div class="logoImagesCircle logoBancoRightMargin">
             <img class="logoLeftNew" src="./image/bancoProCreditAnimation.svg" alt="logoBancoJep">
+            <img class="logoSectionHidden" src="./image/animationLogos/tronAnimation.svg" alt="logoBanco">
           </div>
 
           <div class="logoImagesCircle">
             <img class="logoLeftNew" src="./image/bancoProdubancoAnimation.svg" alt="logoBanco">
+            <img class="logoSectionHidden" src="./image/animationLogos/uniswapAnimation.svg" alt="logoBanco">
           </div>
 
         </div>
@@ -692,69 +703,194 @@
 
 
   </script>
-  <!-- fin script slider -->
+
+ <!-- numeros que empiezan desde cero -->
+ <script>
+// Primero, agregamos el script de Intersection Observer para detectar cuando la sección es visible
+document.addEventListener('DOMContentLoaded', function() {
+  // Seleccionamos la sección que contiene los contadores
+  const seccion = document.querySelector('.volumenDeUvaswap');
+  
+  // Configuramos el Intersection Observer
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      // Cuando la sección sea visible
+      if (entry.isIntersecting) {
+        // Añadimos la clase visible para la animación de entrada
+        seccion.classList.add('visible');
+        // Iniciamos la animación de los contadores
+        iniciarContadores();
+        // Desconectamos el observer para que la animación solo ocurra una vez
+        observer.disconnect();
+      }
+    });
+  }, {
+    threshold: 0.3 // La animación comenzará cuando al menos el 30% de la sección sea visible
+  });
+  
+  // Observamos la sección
+  observer.observe(seccion);
+});
+
+// Función para iniciar los contadores
+function iniciarContadores() {
+  // Obtenemos todos los elementos numéricos
+  const elementoVerde = document.querySelector('.volumenNumerosGrandeVerde');
+  const elementosNormales = document.querySelectorAll('.volumenNumerosGrande');
+  
+  // Definimos los valores finales y los prefijos/sufijos para cada contador
+  // Primer contador (verde)
+  if (elementoVerde) {
+    animarContador(elementoVerde, 0, 12000, '+$', '');
+    elementoVerde.classList.add('animating');
+    setTimeout(() => elementoVerde.classList.remove('animating'), 1500);
+  }
+  
+  // Para asegurarnos de seleccionar los elementos correctos, los identificamos por su ubicación en las tarjetas
+  const tarjetasMoradoRosaPurpura = document.querySelectorAll('.volumenDeUvaswap__tarjeta--morado, .volumenDeUvaswap__tarjeta--rosa, .volumenDeUvaswap__tarjeta--purpura');
+  
+  // Verificamos que tengamos las tarjetas esperadas
+  if (tarjetasMoradoRosaPurpura.length === 3) {
+    // Tarjeta Morada (10.000K)
+    const numeroMorado = tarjetasMoradoRosaPurpura[0].querySelector('.volumenNumerosGrande');
+    if (numeroMorado) {
+      animarContador(numeroMorado, 0, 10000, '+', 'K');
+      numeroMorado.classList.add('animating');
+      setTimeout(() => numeroMorado.classList.remove('animating'), 1500);
+    }
+    
+    // Tarjeta Rosa (100)
+    const numeroRosa = tarjetasMoradoRosaPurpura[1].querySelector('.volumenNumerosGrande');
+    if (numeroRosa) {
+      animarContador(numeroRosa, 0, 100, '+', '');
+      numeroRosa.classList.add('animating');
+      setTimeout(() => numeroRosa.classList.remove('animating'), 1500);
+    }
+    
+    // Tarjeta Púrpura (600)
+    const numeroPurpura = tarjetasMoradoRosaPurpura[2].querySelector('.volumenNumerosGrande');
+    if (numeroPurpura) {
+      animarContador(numeroPurpura, 0, 600, '+', '');
+      numeroPurpura.classList.add('animating');
+      setTimeout(() => numeroPurpura.classList.remove('animating'), 1500);
+    }
+  } else {
+    // Plan B: Si no podemos identificar las tarjetas específicamente, animamos todos los elementos con clase volumenNumerosGrande
+    const valoresFinales = [10000, 100, 600];
+    const sufijos = ['K', '', ''];
+    
+    elementosNormales.forEach((elemento, index) => {
+      if (index < valoresFinales.length) {
+        animarContador(elemento, 0, valoresFinales[index], '+', sufijos[index]);
+        elemento.classList.add('animating');
+        setTimeout(() => elemento.classList.remove('animating'), 1500);
+      }
+    });
+  }
+}
+
+// Función para animar un contador específico
+function animarContador(elemento, inicio, fin, prefijo, sufijo) {
+  // Duración de la animación en milisegundos
+  const duracion = 1500;
+  // Tiempo de inicio
+  const tiempoInicio = performance.now();
+  
+  // Función que se ejecuta en cada frame de la animación
+  function actualizarContador(tiempo) {
+    // Calculamos el tiempo transcurrido
+    const tiempoTranscurrido = tiempo - tiempoInicio;
+    // Calculamos el progreso de la animación (entre 0 y 1)
+    const progreso = Math.min(tiempoTranscurrido / duracion, 1);
+    
+    // Aplicamos una función de easing para que la animación sea más natural
+    // Esta función hace que la animación comience rápido y termine suavemente
+    const easeOutQuart = 1 - Math.pow(1 - progreso, 4);
+    
+    // Calculamos el valor actual basado en el progreso
+    const valorActual = Math.floor(inicio + (fin - inicio) * easeOutQuart);
+    
+    // Actualizamos el texto del elemento
+    elemento.textContent = `${prefijo}${valorActual.toLocaleString()}${sufijo}`;
+    
+    // Si la animación no ha terminado, solicitamos el siguiente frame
+    if (progreso < 1) {
+      requestAnimationFrame(actualizarContador);
+    }
+  }
+  
+  // Iniciamos la animación
+  requestAnimationFrame(actualizarContador);
+}
+</script>
+  <!-- fin numeros empezar desde cero -->
 
 
   <!-- inicio cambio de imagenes -->
-  <!-- <script>
-// Esperar a que el documento esté cargado
-document.addEventListener("DOMContentLoaded", function() {
-  // Seleccionar todos los elementos de imagen
-  const logos = document.querySelectorAll('.logoLeftNew');
+  <style>
+    .logoLeftNew, .logoSectionHidden {
+      transition: opacity 0.5s ease;
+    }
   
-  // Guardar las rutas originales de las imágenes
-  const originalSources = Array.from(logos).map(logo => logo.src);
+    .fade-out {
+      opacity: 0.2;
+    }
   
-  // Configuración de la animación
-  const animationDuration = 3000; // 3 segundos
+    .fade-in {
+      opacity: 1;
+    }
+  </style>
   
-  // Función para animar la transición
-  function animateLogos() {
-    // Hacer que los logos se desvanezcan
-    logos.forEach(logo => {
-      logo.style.transition = 'opacity 0.5s ease';
-      logo.style.opacity = '0';
-    });
-    
-    // Después de desvanecerse, cambiar las fuentes
-    setTimeout(() => {
-      // Rotar las fuentes (mover la primera al final)
-      const firstSource = originalSources.shift();
-      originalSources.push(firstSource);
-      
-      // Asignar nuevas fuentes
-      logos.forEach((logo, index) => {
-        logo.src = originalSources[index];
+  <script>
+    function getShuffledArray(array) {
+      const arr = [...array];
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+  
+    function shuffleLogosSmoothly() {
+      const visibleImgs = Array.from(document.querySelectorAll('.logoLeftNew'));
+      const hiddenImgs = Array.from(document.querySelectorAll('.logoSectionHidden'));
+  
+      const allImgs = visibleImgs.concat(hiddenImgs);
+      const allSrcs = allImgs.map(img => img.src);
+  
+      const shuffledSrcs = getShuffledArray(allSrcs);
+  
+      // Aplicar fade-out
+      allImgs.forEach(img => {
+        img.classList.add('fade-out');
       });
-      
-      // Hacer que los logos aparezcan de nuevo
+  
+      // Luego de la transición, cambiar las imágenes
       setTimeout(() => {
-        logos.forEach(logo => {
-          logo.style.opacity = '1';
+        allImgs.forEach((img, index) => {
+          img.src = shuffledSrcs[index];
         });
-      }, 100);
-      
-    }, 500);
-  }
   
-  // Iniciar la animación a intervalos regulares
-  setInterval(animateLogos, animationDuration);
+        // Luego aplicar fade-in
+        setTimeout(() => {
+          allImgs.forEach(img => {
+            img.classList.remove('fade-out');
+            img.classList.add('fade-in');
   
-  // Opcional: añadir también efectos de transición de escala al contenedor
-  const containers = document.querySelectorAll('.logoImagesCircle');
-  containers.forEach(container => {
-    container.style.transition = 'transform 0.5s ease';
-    
-    // Añadir un pequeño efecto de escala durante la transición
-    setInterval(() => {
-      container.style.transform = 'scale(1.05)';
-      setTimeout(() => {
-        container.style.transform = 'scale(1)';
-      }, 500);
-    }, animationDuration);
-  });
-});
-  </script> -->
+            // Eliminar la clase fade-in después para evitar acumulación
+            setTimeout(() => img.classList.remove('fade-in'), 500);
+          });
+        }, 100); // pequeño delay para asegurarse que ya cambió el src
+      }, 200); // espera 0.2s antes de cambiar las imágenes (coincide con el fade-out)
+    }
+  
+    // Ejecutar cada 4 segundos
+    setInterval(shuffleLogosSmoothly, 4000);
+  
+    // Ejecutar una vez al inicio
+    shuffleLogosSmoothly();
+  </script>
+  
 
 </body>
 

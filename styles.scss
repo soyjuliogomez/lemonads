@@ -1556,6 +1556,11 @@ body {
         justify-content: space-between;
         gap: 56px;
 
+        .logoSectionHidden {
+
+        display: none;
+        }
+
         .logoBancoJepMargin {
           margin-left: -36px;
         }
@@ -1599,6 +1604,10 @@ body {
         flex-direction: column;
         justify-content: space-between;
         gap: 56px;
+        .logoSectionHidden {
+
+          display: none;
+          }
 
 
 
@@ -1648,6 +1657,33 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     margin: 120px 0;
+
+    /* codigo sin organizar de AI */
+    /* Añade estos estilos para mejorar la visualización de la animación */
+.volumenDeUvaswap {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.volumenDeUvaswap.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Estilo para los números que se animarán */
+.volumenNumerosGrandeVerde,
+.volumenNumerosGrande {
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+/* Efecto de resaltado durante la animación */
+.animating {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+/* fin de codigo sin organizar de AI */
 
     // Sección de texto (aprox. 30% del ancho)
     &__texto {
