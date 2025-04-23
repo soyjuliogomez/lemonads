@@ -518,6 +518,7 @@ body {
     z-index: -1; // Asegura que el degradado esté detrás del texto
   } */
   /* inicio slider */
+  /* inicio slider */
   /* fin slider */
   /* fin de volumen */ }
   @media (max-width: 600px) {
@@ -882,7 +883,9 @@ body {
       @media (max-width: 600px) {
         body main .hero_image {
           width: 100%;
-          margin-top: 8rem; } }
+          margin-top: 1rem;
+          display: flex;
+          flex-direction: column; } }
       body main .hero_image .hero_image_container {
         display: flex;
         flex-direction: column;
@@ -902,7 +905,7 @@ body {
         @media (max-width: 600px) {
           body main .hero_image .hero_image_container {
             width: 100%;
-            margin-top: 8rem; } }
+            margin-top: 1rem; } }
         body main .hero_image .hero_image_container .ubicacionLabel {
           color: #464852;
           font-weight: 400;
@@ -954,7 +957,7 @@ body {
             outline: none;
             width: 100%;
             height: 4rem;
-            color: #ffffff;
+            color: #464852;
             outline: none;
             background-color: #ffffff17;
             border-radius: 2rem; }
@@ -1115,6 +1118,9 @@ body {
     justify-content: center;
     align-items: center;
     width: 1200px; }
+    @media (max-width: 37.5rem) {
+      body .slider-section {
+        width: 100%; } }
     body .slider-section .compraBitcoin {
       color: #464852;
       color: #2D0F52;
@@ -1126,7 +1132,11 @@ body {
     body .slider-section .slider-tabs {
       display: flex;
       justify-content: center;
-      margin-bottom: 2rem; }
+      margin-bottom: 2rem;
+      /* @media (max-width: 37.5rem) {
+        width: 500px;
+        scale: 0.3;
+      } */ }
       body .slider-section .slider-tabs .tab {
         display: flex;
         justify-content: center;
@@ -1145,6 +1155,15 @@ body {
         gap: 12px;
         border-width: 2px;
         border-color: #E5EDFC; }
+        @media (max-width: 37.5rem) {
+          body .slider-section .slider-tabs .tab {
+            max-width: fit-content;
+            text-align: left;
+            padding: 8px 12px 8px 8px;
+            font-size: 14px;
+            font-weight: 500;
+            gap: 6px;
+            height: 48px; } }
         body .slider-section .slider-tabs .tab:hover {
           color: #464852;
           border-style: solid;
@@ -1173,9 +1192,11 @@ body {
       width: 100%;
       position: relative;
       overflow: hidden; }
+      @media (max-width: 37.5rem) {
+        body .slider-section .slider {
+          width: 100vw; } }
       body .slider-section .slider .sliderBackground1 {
         background: linear-gradient(to right, #5F5BF0, #8968FE);
-        padding: 72px;
         border-radius: 32px;
         height: 500px; }
       body .slider-section .slider .sliderBackground1 .slide-content p {
@@ -1190,8 +1211,7 @@ body {
       body .slider-section .slider .sliderBackground3 {
         background: linear-gradient(to right, #33245D, #5B40A8);
         padding: 72px;
-        border-radius: 32px;
-        height: 500px; }
+        border-radius: 32px; }
       body .slider-section .slider .sliderBackground3 .slide-content p {
         color: #FFFFFF; }
       body .slider-section .slider .slide {
@@ -1204,7 +1224,16 @@ body {
         align-items: center;
         justify-content: space-between;
         z-index: 1;
+        height: 500px;
+        padding: 72px;
         /* padding: 2rem; */ }
+        @media (max-width: 37.5rem) {
+          body .slider-section .slider .slide {
+            display: flex;
+            flex-direction: column;
+            height: fit-content;
+            padding: 32px;
+            border-radius: 24px; } }
         body .slider-section .slider .slide.active {
           opacity: 1;
           position: relative;
@@ -1213,6 +1242,19 @@ body {
         body .slider-section .slider .slide .slide-image {
           width: 40%;
           height: auto; }
+          @media (max-width: 37.5rem) {
+            body .slider-section .slider .slide .slide-image {
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center; } }
+          @media (max-width: 37.5rem) {
+            body .slider-section .slider .slide .slide-image img {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: fit-content;
+              height: 320px; } }
         body .slider-section .slider .slide .slide-content {
           width: 50%;
           /* button {
@@ -1223,15 +1265,27 @@ body {
             border-radius: 30px;
             cursor: pointer;
           } */ }
+          @media (max-width: 37.5rem) {
+            body .slider-section .slider .slide .slide-content {
+              width: 100%; } }
           body .slider-section .slider .slide .slide-content h1 {
             text-align: left; }
+            @media (max-width: 37.5rem) {
+              body .slider-section .slider .slide .slide-content h1 {
+                text-align: center; } }
           body .slider-section .slider .slide .slide-content p {
             margin-top: 16px;
             margin-bottom: 1rem; }
+            @media (max-width: 37.5rem) {
+              body .slider-section .slider .slide .slide-content p {
+                text-align: center; } }
           body .slider-section .slider .slide .slide-content a {
             /* display:inline-block; */
             margin-top: 32px;
             max-width: fit-content; }
+            @media (max-width: 37.5rem) {
+              body .slider-section .slider .slide .slide-content a {
+                max-width: 100%; } }
         body .slider-section .slider .slide .numero1-wrapper {
           position: absolute;
           top: 50%;
@@ -1627,9 +1681,6 @@ body {
     align-items: flex-start;
     margin: 120px 0;
     /* codigo sin organizar de AI */
-    /* Añade estos estilos para mejorar la visualización de la animación */
-    /* Estilo para los números que se animarán */
-    /* Efecto de resaltado durante la animación */
     /* fin de codigo sin organizar de AI */
   /* @media (max-width: 1024px) {
   flex-direction: column;
@@ -1650,19 +1701,6 @@ body {
     grid-template-columns: 1fr;
   }
 } */ }
-    body .volumenDeUvaswap .volumenDeUvaswap {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.8s ease, transform 0.8s ease; }
-    body .volumenDeUvaswap .volumenDeUvaswap.visible {
-      opacity: 1;
-      transform: translateY(0); }
-    body .volumenDeUvaswap .volumenNumerosGrandeVerde,
-    body .volumenDeUvaswap .volumenNumerosGrande {
-      display: inline-block;
-      transition: color 0.3s ease; }
-    body .volumenDeUvaswap .animating {
-      text-shadow: 0 0 8px rgba(255, 255, 255, 0.5); }
     body .volumenDeUvaswap__texto {
       display: flex;
       width: 40%;
