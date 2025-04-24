@@ -27,6 +27,14 @@ $site-width: 1200px;
 $site-width-mobile: 100%;
 $site-width-tablet: 100%;
 
+
+$shadow-color-light: rgba(0, 0, 0, 0.1);
+$shadow-color-medium: rgba(0, 0, 0, 0.2);
+$shadow-color-dark: rgba(0, 0, 0, 0.3);
+$shadow-color-darker: rgba(0, 0, 0, 0.5);
+
+
+
 * {
   box-sizing: border-box;
   margin: 0;

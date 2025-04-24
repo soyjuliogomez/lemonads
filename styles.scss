@@ -368,7 +368,7 @@ body {
         flex-direction: column;
         justify-content: baseline;
         align-items: flex-start;
-        gap: 0;
+       
         text-align: left;
         width: 680px;
         background: rgba(255, 255, 255, 0.32);
@@ -386,7 +386,16 @@ body {
           width: 100%;
           margin-top: 1rem;
           padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
 
+          h1 {
+            text-align: center;
+          }
+          p {
+            text-align: center;
+          }
           .solo-desktop {
             display: none;
           }
@@ -407,16 +416,31 @@ body {
           margin-bottom: 1rem;
           border-radius: 24px;
           background-color: $neutral-light-purple-30;
-          height: 48px;
+          height: 36px;
+
+          
+
+          @media (max-width: 600px) {
+            gap: 4px;
+            font-size: 16px;
+            padding: 0 16px 0 8px;
+            margin-bottom: 8px;
+
+            img {
+            width: 24px;
+            }
+            
+          }
         }
 
         .first-data-mobile {
           display: none;
 
           input {
-            font-size: 24px;
+            font-size: 18px;
+            text-align: center;
             /* padding-left: 16px; */
-            padding-left: 1.5rem;
+            
             border-style: solid;
             border-color: #ffffff80;
             border-width: 1px;
@@ -427,22 +451,27 @@ body {
             outline: none;
             background-color: $neutral-light-00;
             border-radius: 2rem;
-
+            // Sombra suave y sutil en tono púrpura
+            box-shadow: 0px 2px 8px rgba(128, 90, 213, 0.15);
+          
             &:hover {
               border-style: solid;
               border-color: #d2e9ff;
               border-width: 1px;
+              // Intensificar ligeramente la sombra al pasar el cursor
+              box-shadow: 0px 3px 10px rgba(128, 90, 213, 0.2);
             }
-
+          
             &:focus {
               /* border-style: solid;
                     border-color: #2997ff;
                     border-width: 1px; */
-
-              border: 0.0625rem solid #2997ff;
-              outline: 0.25rem solid #2997ff27;
+          
+              border: 0.0625rem solid $color-primary-00;
+              outline: 0.25rem solid $neutral-light-purple-40;
+              // Cambiar la sombra a un color coordinado con el borde azul pero con toque púrpura
+              box-shadow: 0px 0px 12px rgba(100, 90, 220, 0.25);
             }
-
           }
 
           @media (max-width: 600px) {
