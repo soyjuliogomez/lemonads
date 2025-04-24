@@ -542,12 +542,20 @@ body {
     z-index: 100; }
     @media (max-width: 600px) {
       body .barranavegacion {
-        width: 100%;
+        width: calc(100% - 32px);
+        /* Ancho ajustado para los márgenes */
+        max-width: calc(100% - 32px);
+        /* Asegura que no exceda el ancho disponible */
         justify-content: center;
-        height: 56px;
+        height: 48px;
         position: sticky;
-        top: 12px;
-        margin: 0 24px; } }
+        top: 8px;
+        margin-left: 16px;
+        /* Margen explícito izquierdo */
+        margin-right: 16px;
+        /* Margen explícito derecho */
+        box-sizing: border-box;
+        /* Asegura que el padding no afecte el ancho total */ } }
     body .barranavegacion .logo-barra {
       width: auto;
       display: inline-block;
@@ -784,7 +792,7 @@ body {
         @media (max-width: 600px) {
           body main .hero_image .hero_image_container {
             width: 100%;
-            margin-top: 1rem;
+            /* margin-top: 1rem; */
             padding: 0;
             display: flex;
             justify-content: center;
@@ -1349,12 +1357,24 @@ body {
         max-width: 100%; } }
     body .containerRecibe h1 {
       color: #2D0F52;
-      /* text-align: center; */ }
-      body .containerRecibe h1 span img {
+      line-height: 1.2; }
+      body .containerRecibe h1 .country {
+        display: inline-flex;
+        align-items: center;
+        vertical-align: middle; }
+        @media (max-width: 37.5rem) {
+          body .containerRecibe h1 .country {
+            vertical-align: middle; } }
+      body .containerRecibe h1 .flag {
         display: inline-block;
-        height: fit-content;
-        margin-top: 16px;
-        margin-right: 12px; }
+        width: auto;
+        height: 56px;
+        margin: 0 8px;
+        vertical-align: middle; }
+        @media (max-width: 37.5rem) {
+          body .containerRecibe h1 .flag {
+            height: 36px;
+            margin: 0 4px; } }
       @media (max-width: 37.5rem) {
         body .containerRecibe h1 {
           font-size: 1.875rem; } }
