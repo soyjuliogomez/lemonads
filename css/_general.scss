@@ -31,6 +31,11 @@ $site-width-tablet: 100%;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  @media (max-width: 600px) {
+    /* overflow-x: hidden; */
+  }
+  
+  
 }
 
 /* $xxs: 4px;
@@ -109,7 +114,7 @@ $9xl: 176; */
 } */
 
 .display {
-  width: 100vw;
+  
   color: $text-body-primary;
   font-family: "Inter", sans-serif;
   font-size: 4.5rem;
@@ -268,9 +273,7 @@ $9xl: 176; */
   font-size: 14px;
   line-height: 140%;
   font-weight: 500;
-  @media (max-width: 600px) {
-    font-size: 32px;
-  }
+  
 
   &--section {
     margin-top: $m;
