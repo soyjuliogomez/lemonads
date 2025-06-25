@@ -1,0 +1,114 @@
+// ===== VARIABLES PARA CONTROLAR LA ANIMACIÓN =====
+$float-distance: 10px;      // Distancia de movimiento vertical (más = más pronunciado)
+$float-speed: 3s;           // Velocidad de la animación (menos = más rápido)
+$float-easing: ease-in-out; // Tipo de suavizado (ease, linear, ease-in-out, etc.)
+
+// ===== KEYFRAMES PARA EL EFECTO FLOTANTE =====
+@keyframes float {
+  0% {
+    transform: translateX(-50%) translateY(0px);           // Mantener centrado + posición inicial
+  }
+  50% {
+    transform: translateX(-50%) translateY(-$float-distance);  // Mantener centrado + subir
+  }
+  100% {
+    transform: translateX(-50%) translateY(0px);           // Mantener centrado + volver a inicial
+  }
+}
+
+// ===== ESTILOS PARA LA IMAGEN =====
+.serverLemonads {
+  // MANTENER POSICIÓN ORIGINAL
+  position: absolute;                    // Permite posicionarla con respecto a .heroImage
+  bottom: 0;                            // Ancla la parte inferior al borde inferior del contenedor
+  left: 50%;                            // Mueve el borde izquierdo al 50% del ancho del contenedor
+  
+  // COMBINAR CENTRADO HORIZONTAL + ANIMACIÓN FLOTANTE
+  transform: translateX(-50%);          // Centrado horizontal base
+  
+  // DIMENSIONES Y DISPLAY
+  max-width: 100%;                      // Asegura que no se desborde horizontalmente
+  height: auto;                         // Mantiene la relación de aspecto
+  display: block;                       // Remueve espacio inferior de imagen
+  
+  // APLICAR ANIMACIÓN FLOTANTE
+  animation: float $float-speed $float-easing infinite;
+  
+  // OPTIMIZACIÓN DE RENDIMIENTO
+  will-change: transform;               // Optimiza la animación
+  backface-visibility: hidden;         // Mejora la calidad visual
+  transform-origin: center center;     // Centra la transformación
+}
+
+// ===== VARIACIONES DE VELOCIDAD (usar solo una) =====
+
+// LENTO (movimiento muy suave)
+.serverLemonads.slow {
+  animation-duration: 6s;
+}
+
+// NORMAL (configuración por defecto)
+.serverLemonads.normal {
+  animation-duration: 3s;
+}
+
+// RÁPIDO (movimiento más dinámico)
+.serverLemonads.fast {
+  animation-duration: 1.5s;
+}
+
+// MUY RÁPIDO (movimiento enérgico)
+.serverLemonads.very-fast {
+  animation-duration: 0.8s;
+}
+
+// ===== VARIACIONES DE DISTANCIA (usar solo una) =====
+
+// SUTIL (movimiento apenas perceptible)
+.serverLemonads.subtle {
+  animation-name: float-subtle;
+}
+
+@keyframes float-subtle {
+  0%, 100% { transform: translateX(-50%) translateY(0px); }
+  50% { transform: translateX(-50%) translateY(-5px); }
+}
+
+// PRONUNCIADO (movimiento más visible)
+.serverLemonads.pronounced {
+  animation-name: float-pronounced;
+}
+
+@keyframes float-pronounced {
+  0%, 100% { transform: translateX(-50%) translateY(0px); }
+  50% { transform: translateX(-50%) translateY(-20px); }
+}
+
+// ===== VARIACIONES DE EASING (diferentes efectos) =====
+
+// REBOTE (efecto de rebote)
+.serverLemonads.bounce {
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+// LINEAL (velocidad constante)
+.serverLemonads.linear {
+  animation-timing-function: linear;
+}
+
+// SUAVE (aceleración y desaceleración gradual)
+.serverLemonads.smooth {
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+// ===== PAUSA EN HOVER (opcional) =====
+.serverLemonads.pausable {
+  &:hover {
+    animation-play-state: paused;  // Pausa la animación al hacer hover
+  }
+}
+
+// ===== DELAY ALEATORIO (para múltiples elementos) =====
+.serverLemonads.delay-1 { animation-delay: 0.5s; }
+.serverLemonads.delay-2 { animation-delay: 1s; }
+.serverLemonads.delay-3 { animation-delay: 1.5s; }

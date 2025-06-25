@@ -3,6 +3,10 @@ $color-primary-10: #5855E0;
 $color-primary-20: #4E4CC7;
 $color-primary-80: #241943; 
 
+$secondary-00: #DFFD62;
+$secondary-30: #B5D62B;
+
+
 $neutral-light-00: #FFFFFF;
 
 $neutral-dark-40: #464852;
@@ -212,7 +216,7 @@ $9xl: 176; */
 
 
 .h1__page {
-  color: $neutral-light-00;
+  color: $neutral-dark-40;
   font-family: "Inter", sans-serif;
   font-size: 3rem;
   text-align: center;

@@ -42,13 +42,11 @@
       <hr />
       <div class="botones-usuario">
         <!-- <a class="boton-iniciarSesion" href="Login.html">Iniciar sesion</a> -->
-        <a href="#"
-          class="button button__secondary">About Us &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
-          <a href="#"
-          class="button button__secondary">Login</i></a>
-        <a href="#" class="button button__primary"
-          onclick="scrollToData()">Book A Demo &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
-          
+        <a href="#" class="button button__secondary">About Us &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#" class="button button__secondary">Login</i></a>
+        <a href="#" class="button button__primary" onclick="scrollToData()">Book A Demo &nbsp;<i
+            class="fa-solid fa-arrow-right"></i></a>
+
       </div>
     </div>
   </nav>
@@ -57,8 +55,8 @@
     <section class="hero_image">
       <section class="hero_image_container">
 
-        
-        
+
+
         <h1 class="display display__desktop">
           Squeeze more from your Google Ads And Maximize Your ROI
         </h1>
@@ -71,8 +69,8 @@
           <input name="correo" type="" placeholder="Ingresa su numero de celular"
             class="input input--margin-top input--margin-botton" required />
 
-          <a href="https://www.facebook.com/ppcpredict"
-            class="button button__primary button__primary--width100" onclick="scrollToData()">
+          <a href="https://www.facebook.com/ppcpredict" class="button button__primary button__primary--width100"
+            onclick="scrollToData()">
 
             <img src="image/social-media/whatsAppLogo.svg" alt="WhatsApp"
               style=" margin-right: 6px; vertical-align: middle;">
@@ -97,14 +95,69 @@
       <section class="ilustrationLemonads">
 
         <div class="heroImage">
+          <svg class="lineaUnoAnimacion" width="400" height="600" viewBox="0 0 400 600"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M 282 450 
+            L 282 285 
+            Q 282 260, 257 260 
+            L 157 260 
+            Q 132 260, 132 235
+            L 132 80" fill="none" stroke="#DFFD62" stroke-width="4" stroke-dasharray="15,10" opacity="0.9"></path>
+            <animate attributeName="stroke-dashoffset" values="50;0" dur="0.4s" repeatCount="indefinite" />
+          </svg>
+          <svg class="lineaUnoAnimacion linea2" width="400" height="630" viewBox="0 0 400 630"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M 262 450 
+            L 262 275 
+            Q 262 250, 287 250 
+            L 307 250 
+            Q 332 250, 332 225
+            L 332 70" fill="none" stroke="#DFFD62" stroke-width="4" stroke-dasharray="15,10" opacity="0.9"
+              style="border-radius: 60px;"></path>
+            <animate attributeName="stroke-dashoffset" values="50;0" dur="0.4s" repeatCount="indefinite" />
+          </svg>
+
           <img class="sankey" src="./image/heroImage/sankey.svg" alt="sankey">
           <img class="girlLaptop" src="./image/heroImage/girlLaptop.svg" alt="girlLaptop">
           <img class="guyWithLaptop" src="./image/heroImage/guyWithLaptop.svg" alt="girlLaptop">
           <img class="serverLemonads" src="./image/heroImage/serverLemonads.svg" alt="serverLemonads">
-          
+
+          <!-- HTML CON IDs -->
+          <div class="labelsWithValues label-campaigns" id="campaigns-label">
+            <span class="material-symbols-rounded">campaign</span>
+            <span class="percentage-badge__text" id="campaigns-value">86.00%</span>
+            <span class="material-symbols-rounded">trending_up</span>
+          </div>
+
+          <div class="labelsWithValues label-notifications" id="notifications-label">
+            <span class="material-symbols-rounded">savings</span>
+            <span class="percentage-badge__text" id="notifications-value">72.00%</span>
+            <span class="material-symbols-rounded">trending_down</span>
+          </div>
+
+          <div class="labelsWithValues label-analytics" id="analytics-label">
+            <span class="material-symbols-rounded">analytics</span>
+            <span class="percentage-badge__text" id="analytics-value">94.00%</span>
+            <span class="material-symbols-rounded">trending_up</span>
+          </div>
+
+          <div class="labelsWithValues label-visibility" id="visibility-label">
+            <span class="material-symbols-rounded">visibility</span>
+            <span class="percentage-badge__text" id="visibility-value">422,921</span>
+            <span class="material-symbols-rounded">trending_up</span>
+          </div>
+
+          <div class="labelsWithValues label-ads_click" id="ads_click-label">
+            <span class="material-symbols-rounded">ads_click</span>
+            <span class="percentage-badge__text" id="ads_click-value">230,624</span>
+            <span class="material-symbols-rounded">trending_up</span>
+          </div>
+
+
+
         </div>
 
-        
+
 
 
         <!-- Añade más cards aquí -->
@@ -221,46 +274,23 @@
 
 
 
-    <!-- Fin del slider -->
 
-    <!-- Inicio seccion recibe -->
-    <!-- <div class="containerRecibe">
-      <h1 class="h1__page h1__page--section h1__page--alignleft">
-        Cambia Tus Cripto A Cualquier<br>
-        Banco En <span class="country"><img src="./image/ecuadorRecibeBandera.svg" alt="Bandera de Ecuador" class="flag"></span> Ecuador En Solo 2 Pasos
+
+
+    <div class="containerImageAppInformation">
+      <h1 class="h1__page">
+        Get all your Google Ads
+        metrics in one dashboard.
       </h1>
-      <div class="cardsParaRecibir">
-        <div class="card card-purple">
-          <div class="contenidoRecibir">
-            <h2 class="h1__page h1__page--section h1__page--aligncenter">Envía Tus Cripto 🚀</h2>
-            <p class="body__large">Transfiere El Monto A<br>Nuestra Billetera Segura.</p>
-            <a class="button button__ghost"
-              href="https://www.facebook.com/ppcpredict">Empieza en Segundos &nbsp;<i
-                class="fa-solid fa-arrow-right"></i></a>
-          </div>
-          <div class="card-image">
-            <img src="./image/imagenMujerEnviar.png" alt="Persona usando laptop para enviar cripto">
-          </div>
-        </div>
-
-        <div class="card card-green">
-          <div class="contenidoRecibir">
-            <h1 class="h1__page h1__page--section h1__page--aligncenter">Recibe En Tu Banco</h1>
-            <p class="body__large">Te Enviamos El Dinero<br>Directamente A Tu Cuenta Local</p>
-            <a class="button button__secondary" onclick="scrollToData()"
-              href="https://www.facebook.com/ppcpredict">Comenzar Ahora &nbsp;<i
-                class="fa-solid fa-arrow-right"></i></a>
-          </div>
-          <div class="card-image">
-            <img src="./image/imagenMujerRecibir.svg" alt="Persona recibiendo dinero en el banco con notificaciones">
-          </div>
-        </div>
+      <!-- IMÁGENES DE FONDO DECORATIVAS -->
+  <div class="background-decorations">
+    <img class="decoration-1" src="./image/imageAppSection/decorativeImagenApp1.png" alt="">
+    <img class="decoration-2" src="./image/imageAppSection/decorativeImagenApp2.png" alt="">
+  </div>
+      <div class="containerImageApp">
+        <img class="logoLeftNew" src="./image/heroImage/imageApp.svg" alt="logoLeft">
       </div>
-    </div> -->
-    <!-- Fin de 2 secciones recibe -->
-
-    
-
+    </div>
 
 
 
@@ -275,16 +305,15 @@
         <p class="body__large">Access real search terms from Google Ads to keep your campaigns aligned with trends.
         </p>
         <!-- Botón de acción -->
-        <a class="button button__secondary" onclick="scrollToData()"
-          href="https://www.facebook.com/ppcpredict">Learn More &nbsp;<i
-            class="fa-solid fa-arrow-right"></i></a>
+        <a class="button button__secondary" onclick="scrollToData()" href="https://www.facebook.com/ppcpredict">Learn
+          More &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
 
       </div>
 
       <!-- Contenedor de las tarjetas de estadísticas -->
       <div class="volumenDelemonads__estadisticas">
         <img class="logoFooterSmall" src="./image/dataSection/dataSeccion.svg" alt="logo-footer" />
-        
+
       </div>
     </div>
 
@@ -376,7 +405,7 @@
     <div class="logoFooterLarge">
       <img class="logoLarge" src="./image/footer/lemonadsFooterBig.svg" alt="logoLarge" />
     </div>
-    
+
   </footer>
 
   <script>
@@ -683,6 +712,7 @@ function animarContador(elemento, inicio, fin, prefijo, sufijo) {
     // Ejecutar una vez al inicio
     shuffleLogosSmoothly();
   </script>
+  <script src="scripts/valueAnimationHeroImage.js"></script>
 
 
 </body>

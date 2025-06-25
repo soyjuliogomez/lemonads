@@ -1,0 +1,140 @@
+// ===== VARIABLES PARA FÁCIL EDICIÓN =====
+$campaigns-bg: $neutral-light-purple-30;
+$campaigns-icon: #6366f1;
+$campaigns-text: #1f2937;
+$campaigns-trend: $secondary-30;
+
+$notifications-bg: $neutral-light-purple-30;
+$notifications-icon: #6366f1;
+$notifications-text: #1f2937;
+$notifications-trend: $secondary-30;
+
+$analytics-bg: $neutral-light-purple-30;
+$analytics-icon: #6366f1;
+$analytics-text: #1f2937;
+$analytics-trend: $secondary-30;
+
+$visibility-bg: $neutral-light-purple-30;
+$visibility-icon: #6366f1;
+$visibility-text: #1f2937;
+$visibility-trend: $secondary-30;
+
+$ads_click-bg: $neutral-light-purple-30;
+$ads_click-icon: #6366f1;
+$ads_click-text: #1f2937;
+$ads_click-trend: $secondary-30;
+
+// ===== ESTILOS BASE =====
+.labelsWithValues {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 16px;
+  gap: 8px;
+  z-index: 10;
+  
+  .material-symbols-rounded {
+    font-size: 24px;
+  }
+  
+  .percentage-badge__text {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+    line-height: 1;
+  }
+}
+
+// ===== CLASES INDIVIDUALES =====
+.label-campaigns {
+  background-color: $campaigns-bg;
+  top: 12%;
+  left: 7%;
+  
+  .material-symbols-rounded:first-child {
+    color: $campaigns-icon;
+  }
+  
+  .percentage-badge__text {
+    color: $campaigns-text;
+  }
+  
+  .material-symbols-rounded:last-child {
+    color: $campaigns-trend;
+  }
+}
+
+.label-notifications {
+  background-color: $notifications-bg;
+  top: 20%;
+  left: 30%;
+  
+  .material-symbols-rounded:first-child {
+    color: $notifications-icon;
+  }
+  
+  .percentage-badge__text {
+    color: $notifications-text;
+  }
+  
+  .material-symbols-rounded:last-child {
+    color: $notifications-trend;
+  }
+}
+
+.label-analytics {
+  background-color: $analytics-bg;
+  top: 25%;
+  left: 0%;
+  
+  .material-symbols-rounded:first-child {
+    color: $analytics-icon;
+  }
+  
+  .percentage-badge__text {
+    color: $analytics-text;
+  }
+  
+  .material-symbols-rounded:last-child {
+    color: $analytics-trend;
+  }
+}
+
+.label-visibility {
+  background-color: $visibility-bg;
+  top: 10%;
+  left: 40%;
+  z-index: -1;
+  
+  .material-symbols-rounded:first-child {
+    color: $visibility-icon;
+  }
+  
+  .percentage-badge__text {
+    color: $visibility-text;
+  }
+  
+  .material-symbols-rounded:last-child {
+    color: $visibility-trend;
+  }
+}
+
+.label-ads_click {
+  background-color: $ads_click-bg;
+  top: 0%;
+  left: 0%;
+  
+  .material-symbols-rounded:first-child {
+    color: $ads_click-icon;
+  }
+  
+  .percentage-badge__text {
+    color: $ads_click-text;
+  }
+  
+  .material-symbols-rounded:last-child {
+    color: $ads_click-trend;
+  }
+}
