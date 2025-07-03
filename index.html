@@ -166,9 +166,9 @@
 
     <!-- logos de bancos -->
     <section class="sponsors">
-      <h1 class="h1__page h1__page--section h1__page--aligncenter">
+      <h2 class="h1__page h2__page--section h2__page--aligncenter">
         Brands that believe in us
-      </h1>
+      </h2>
       <div class="logosPatrocinadores">
         <img class="customers" src="./image/customers/customer1.svg" alt="logoBanco">
         <img class="customers" src="./image/customers/customer2.svg" alt="logoBanco">
@@ -183,9 +183,9 @@
     <!-- inicio del slider -->
 
     <div class="slider-section">
-      <h1 class="h1__page h1__page--section h1__page--aligncenter compraBitcoin">
+      <h2 class="h2__page h2__page--section h2__page--aligncenter compraBitcoin">
         Less work, more results in 4 steps
-      </h1>
+      </h2>
       <!-- Tabs arriba -->
       <div class="slider-tabs">
         <button data-slide="0" class="tab active">
@@ -215,10 +215,10 @@
           </div>
           <!-- HTML con un solo H1 y spans -->
           <div class="slide-content">
-            <h1 class="h1__page">
+            <h2 class="h2__page h2__page--alignleft h2__page--light">
               <span class="texto-desktop">Connect Your Google Ads Account with Ease</span>
-              <span class="texto-mobile">Connect Your Google Ads Account with Ease</span>
-            </h1>
+              
+            </h2>
             <p class="body">Easily link your Google Ads account and get ready to optimize without hassle.</p>
             <a class="button button__ghost">Learn More &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
           </div>
@@ -250,7 +250,7 @@
             <img class="avatar-img" src="./image/tabsToStep/step3.svg" alt="imagenCompra3">
           </div>
           <div class="slide-content">
-            <h1 class="h1__page">Fix Errors Instantly and Improve Performance</h1>
+            <h2 class="h2__page h2__page--alignleft h2__page--light">Fix Errors Instantly and Improve Performance</h2>
             <p class="body">Apply data-driven solutions to enhance performance and maximize efficiency.</p>
             <a class="button button__ghost">Learn More &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
           </div>
@@ -278,10 +278,15 @@
 
 
     <div class="containerImageAppInformation">
-      <h1 class="h1__page">
-        Get all your Google Ads
-        metrics in one dashboard.
-      </h1>
+      <div>
+        <h2 class="h2__page">
+          Get all your Google Ads
+          metrics in one dashboard.
+        </h2>
+        
+
+      </div>
+      
       <!-- IMÁGENES DE FONDO DECORATIVAS -->
   <div class="background-decorations">
     <img class="decoration-1" src="./image/imageAppSection/decorativeImagenApp1.png" alt="">
@@ -299,23 +304,72 @@
     <!-- Contenedor principal -->
     <div class="volumenDelemonads">
       <!-- Sección de texto a la izquierda -->
-      <div class="volumenDelemonads__texto">
-        <h1 class="h1__page">Sync Your Keywords
-          with Our Database of 281M+ Search Terms</h1>
-        <p class="body__large">Access real search terms from Google Ads to keep your campaigns aligned with trends.
-        </p>
-        <!-- Botón de acción -->
-        <a class="button button__secondary" onclick="scrollToData()" href="https://www.facebook.com/ppcpredict">Learn
-          More &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+       <div class="dataContainerLeft">
+        <div class="volumenDelemonads__texto">
+          <h1 class="h2__page h2__page--alignleft">Sync Your Keywords
+            with Our Database of 281M+ Search Terms</h1>
+          <p class="body__large body__large--sectionSmall">Access real search terms from Google Ads to keep your campaigns aligned with trends.
+          </p>
+          <!-- Botón de acción -->
+          
+  
+        </div>
+        <div class="dataItems">
+          <div class="dataSection1">
+            <img src="./image/dataImages/icon1.svg" alt="">
+            <p class="body__small">
+              Access real search terms from Google Ads to keep your campaigns aligned with trends.
+            </p>
+          </div>
+          <div class="dataSection2">
+            <img src="./image/dataImages/icon2.svg" alt="">
+            <p class="body__small">
+              Explore search data across sectors to refine targeting and improve ad results.            </p>
+          </div>
+          <div class="dataSection3">
+            <img src="./image/dataImages/icon3.svg" alt="">
+            <p class="body__small">
+              Boost campaign effectiveness with data-backed insights.            </p>
+          </div>
+  
+        </div>
 
-      </div>
+       </div>
+      
 
       <!-- Contenedor de las tarjetas de estadísticas -->
       <div class="volumenDelemonads__estadisticas">
-        <img class="logoFooterSmall" src="./image/dataSection/dataSeccion.svg" alt="logo-footer" />
+        <img class="imageDataSection" src="./image/dataImages/dataSeccion.svg" alt="logo-footer" />
 
       </div>
     </div>
+    <!-- Sección de testimonios -->
+    <section class="testimonials">
+      <div class="testimonials__container">
+        <div class="testimonials__header">
+          <h2 class="h2__page">Lo que dicen nuestros clientes</h2>
+          <p class="body body__large">Más de 1000 clientes satisfechos confían en nosotros para sus necesidades digitales</p>
+        </div>
+      </div>
+      
+      <div class="testimonials__slider">
+        <div class="testimonials__track" id="testimonialsTrack">
+          <!-- Los testimonios se generan dinámicamente con JS -->
+        </div>
+      </div>
+      
+      <div class="testimonials__container">
+        <div class="testimonials__controls">
+          <button class="testimonials__btn testimonials__btn--prev" id="testimonialsBtn-prev"><span class="material-symbols-rounded">
+            chevron_left
+            </span></button>
+          <button class="testimonials__btn testimonials__btn--next" id="testimonialsBtn-next"><span class="material-symbols-rounded">
+            chevron_right
+            </span></button>
+        </div>
+        
+  
+    </section>
 
 
   </main>
@@ -713,6 +767,8 @@ function animarContador(elemento, inicio, fin, prefijo, sufijo) {
     shuffleLogosSmoothly();
   </script>
   <script src="scripts/valueAnimationHeroImage.js"></script>
+  <script src="scripts/testimonialSection.js"></script>
+
 
 
 </body>

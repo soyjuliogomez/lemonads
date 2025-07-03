@@ -3,6 +3,9 @@
 @import "css/_labelsInHeroImage.scss";
 @import "css/_serverAnimationHeroImage.scss";
 @import "css/_backgroundGradientsToAppImage.scss";
+@import "css/_testimonialLandingPage.scss";
+
+
 
 
 
@@ -49,33 +52,27 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgba(255, 255, 255, 0.526);
-    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.15); // Más transparente para efecto cristal
+    backdrop-filter: blur(20px) saturate(180%); // Aumenta el desenfoque y saturación
+    -webkit-backdrop-filter: blur(20px) saturate(180%); // Compatibilidad con Safari
+    border: 1px solid rgba(255, 255, 255, 0.3); // Borde sutil para el efecto cristal
     height: 72px;
-    /* position: fixed; */
-    /* z-index: 4; */
     padding: 0px 12px 0px 24px;
     border-radius: 36px;
-    /* top: 0px; */
     position: sticky;
     top: 24px;
     z-index: 100;
 
     @media (max-width: 600px) {
       width: calc(100% - 32px);
-      /* Ancho ajustado para los márgenes */
       max-width: calc(100% - 32px);
-      /* Asegura que no exceda el ancho disponible */
       justify-content: center;
       height: 48px;
       position: sticky;
       top: 8px;
       margin-left: 16px;
-      /* Margen explícito izquierdo */
       margin-right: 16px;
-      /* Margen explícito derecho */
       box-sizing: border-box;
-      /* Asegura que el padding no afecte el ancho total */
     }
 
     .logo-barra {
@@ -89,7 +86,6 @@ body {
     }
 
     .menu {
-      /* max-width: 100% !important; */
       display: flex;
       align-items: center;
       justify-content: center;
@@ -104,14 +100,18 @@ body {
         text-decoration: none;
         font-size: 16px;
         font-weight: 500;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: rgba(255, 255, 255, 0.8); // Efecto hover más claro
+        }
       }
 
       hr {
         border-style: none;
         height: 1.5rem;
         width: 1px;
-        /* background-color: $Neutrals-Light-40; */
-        opacity: 50%;
+        background-color: rgba(255, 255, 255, 0.3); // Más sutil
         border-radius: 2px;
       }
 
@@ -126,12 +126,17 @@ body {
           align-items: center;
           justify-content: center;
           height: 48px;
-          background-color: $color-primary-00;
+          background-color: rgba(255, 255, 255, 0.2); // Transparente para efecto cristal
           color: #ffffff;
           border-radius: 28px;
           padding: 0 32px;
           font-size: 20px;
           text-decoration: none;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.4); // Hover más claro
+          }
         }
 
         .boton-registrarme {
@@ -139,13 +144,18 @@ body {
           align-items: center;
           justify-content: center;
           height: 3rem;
-          background-color: $color-primary-00;
+          background-color: rgba(255, 255, 255, 0.2); // Transparente para efecto cristal
           color: #ffffff;
           border-radius: 1.75rem;
           padding: 0 2rem;
           font-size: 1.25rem;
           font-family: "Poppins", sans-serif;
           text-decoration: none;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.4); // Hover más claro
+          }
         }
       }
     }
@@ -387,9 +397,9 @@ body {
 
         text-align: left;
         width: 680px;
-        background: rgba(255, 255, 255, 0.32);
 
-        backdrop-filter: blur(36px);
+
+
 
         padding: 56px; // espacio interno
         position: relative;
@@ -1630,29 +1640,7 @@ body {
 
 
 
-  .containerImageAppInformation {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 44px;
-    margin: 120px 0;
 
-    .containerImageApp {
-      display: flex;
-      padding: 32px;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      border-radius: 48px;
-      border: 1px solid #FFF;
-      background: rgba(240, 244, 252, 0.40);
-
-      img {
-        border-radius: 32px;
-      }
-    }
-
-  }
   $color-verde: #c1ff00;
   $color-morado: #2e0e4b;
   $color-rosa: #ff3a66;
@@ -1666,11 +1654,14 @@ body {
   .volumenDelemonads {
 
     // Estructura principal
+    width: 100%;
+    /* width: $site-width; */
     display: flex;
-    width: $site-width;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     margin: 120px 0;
+    gap: 32px;
+    height:fit-content;
 
     @media (max-width: 37.5rem) {
       width: 100%;
@@ -1679,61 +1670,94 @@ body {
       gap: 40px;
     }
 
-
-
-    /* codigo sin organizar de AI */
-
-
-    /* fin de codigo sin organizar de AI */
-
-    // Sección de texto (aprox. 30% del ancho)
-    &__texto {
+    .dataContainerLeft {
       display: flex;
-      width: 40%;
+      width: 50%;
       flex-direction: column;
-      justify-content: center;
       align-items: flex-start;
-      gap: 24px;
+      gap: 32px;
       flex-shrink: 0;
 
-      @media (max-width: 37.5rem) {
+      .dataItems {
+        display: flex;
+        
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+
+        .dataSection1 {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          align-self: stretch;
+        }
+
+        .dataSection2 {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          align-self: stretch;
+        }
+
+        .dataSection3 {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          align-self: stretch;
+        }
+      }
+
+    }
+
+    .volumenDelemonads__estadisticas{
+      display:flex;
+      align-items: stretch;
+    
+      width: 100%;
+      background: $neutral-light-purple-40;
+      /* background: $color-primary-00; */
+      border-radius: 32px;
+      min-height: 100%;
+
+      .imageDataSection {
         width: 100%;
-
-
-      }
-
-      h1 {
-        font-size: 48px;
-        font-weight: 700;
-        color: $color-primary-80;
-        text-align: left;
       }
 
     }
 
-    // Título principal
 
 
-
-
-
-
-    // Contenedor de estadísticas (aprox. 65% del ancho)
-    &__estadisticas {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-
-      @media (max-width: 37.5rem) {
-        // centra horizontalmente cada card (opcional)
-      }
-    }
 
 
   }
 
-  
+  .containerImageAppInformation {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 44px;
+    margin: 120px 0;
+
+    .containerImageApp {
+      display: flex;
+      padding: 24px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 48px;
+      border: 1px solid #FFF;
+      background: rgba(240, 244, 252, 0.40);
+
+      img {
+        width: 100%;
+        border-radius: 32px;
+      }
+    }
+
+  }
+
+
 
   /* fin de volumen */
 

@@ -27,7 +27,7 @@ $text-body-primary: #2D0F52;
 $text-body-secondary:#2D0F52;
 
 //tamaños de contenedores de sitio web
-$site-width: 1200px;
+$site-width: 75rem; //1200px
 $site-width-mobile: 100%;
 $site-width-tablet: 100%;
 
@@ -242,21 +242,93 @@ $9xl: 176; */
 }
 
 .h2__page {
-  color: #ffffee;
+  color: $color-primary-80;
   font-family: "Inter", sans-serif;
-  font-size: 2rem;
+  font-size: 48px;
   text-align: center;
-  line-height: 140%;
+  line-height: 135%;
+  
   @media (max-width: 600px) {
     font-size: 32px;
   }
 
+  // Modificadores existentes
   &--section {
     margin-top: $m;
   }
 
   &--alignleft {
     text-align: left;
+  }
+
+  // 🎨 NUEVOS MODIFICADORES DE COLOR
+
+  // Para fondos oscuros
+  &--light {
+    color: #ffffff; // Blanco para fondos oscuros
+  }
+
+  &--dark {
+    color: #333333; // Oscuro para fondos claros
+  }
+
+  // Variaciones de grises
+  &--gray-light {
+    color: #9ca3af; // Gris claro - agregar tu variable $color-gray-20
+  }
+
+  &--gray-medium {
+    color: #6b7280; // Gris medio - agregar tu variable $color-gray-50
+  }
+
+  &--gray-dark {
+    color: #374151; // Gris oscuro - agregar tu variable $color-gray-80
+  }
+
+  // Variaciones del color primario
+  &--primary {
+    color: $color-primary-80; // Color primario original (redundante, pero claro)
+  }
+
+  &--primary-light {
+    color: #8b5cf6; // Primario más claro - agregar tu variable $color-primary-60
+  }
+
+  &--primary-dark {
+    color: #5b21b6; // Primario más oscuro - agregar tu variable $color-primary-100
+  }
+
+  // Variaciones especiales
+  &--secondary {
+    color: #10b981; // Color secundario - agregar tu variable $color-secondary
+  }
+
+  &--accent {
+    color: #f59e0b; // Color de acento - agregar tu variable $color-accent
+  }
+
+  // Combinaciones útiles
+  &--light.--alignleft {
+    color: #ffffff;
+    text-align: left;
+  }
+
+  &--dark.--section {
+    color: #333333;
+    margin-top: $m;
+  }
+
+  // Variación automática basada en el contenedor padre
+  .bg-dark & {
+    color: #ffffff; // Automáticamente blanco en contenedores oscuros
+  }
+
+  .bg-light & {
+    color: #333333; // Automáticamente oscuro en contenedores claros
+  }
+
+  .bg-primary & {
+    color: #ffffff; // Blanco sobre fondo primario
   }
 }
 
@@ -311,6 +383,9 @@ $9xl: 176; */
     &--sectionMedium {
         margin-top: 2rem;
       }
+      &--sectionSmall {
+        margin-top: 1.5rem;
+      }
 
     &--aligncenter {
       text-align: center;
@@ -326,6 +401,26 @@ $9xl: 176; */
   }
 
   &__small {
+    
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+
+    &--section {
+      margin-top: $m;
+    }
+
+    &--aligncenter {
+      text-align: center;
+    }
+
+    &--alignleft {
+      text-align: left;
+    }
+    @media (max-width: 600px) {
+      font-size: 0.875rem;
+    }
+  }
+  &__medium {
     color: #ffffff;
     font-family: "Poppins", sans-serif;
     font-size: $m;
@@ -541,28 +636,26 @@ a {
 
 
 .button {
-  color: #ffffff;
   height: 3rem;
-
   font-size: 1.125rem;
   font-weight: 500;
   padding: 0 2rem;
   justify-content: center;
   font-family: "Poppins", sans-serif;
   cursor: pointer;
-
   display: flex;
   align-items: center;
   border-style: none;
 
   &__primary {
+    color: #ffffff;
     background-color: $color-primary-00;
     box-sizing: border-box;
     text-decoration: none;
     border-radius: 2.5rem;
+    
     &:hover {
       background-color: $color-primary-10;
-      
     }
 
     &--absolute {
@@ -573,100 +666,89 @@ a {
     &--width100 {
       width: 100%;
     }
+    
     &--widthfit {
-      width:fit-content;
+      width: fit-content;
     }
   }
 
-    &__secondary {
-  
-      /* box-sizing: border-box; */
-      text-decoration: none;
-  
-      border-radius: 2.5rem;
-      border-width: 0.125rem;
-      /* Cambiado de border-style a border-width */
-      border-style: solid;
-      /* Agregado border-style */
-      border-color: $color-primary-00;
-      color: $color-primary-00;
-  
-      &:hover {
-        background-color: $color-primary-10;
-        color: #ffffff;
-        border-style:none;
-        
-      }
-  
-      &--width100 {
-        width: 100%;
-      }
-  
-      &--widthfit {
-        width: fit-content;
-      }
+  &__secondary {
+    background-color: transparent;
+    box-sizing: border-box;
+    text-decoration: none;
+    border-radius: 2.5rem;
+    border-width: 0.125rem;
+    border-style: solid;
+    border-color: $color-primary-00;
+    color: $color-primary-00;
 
-      &--space {
-        display: flex;
-        gap: $x;
-        
-      }
+    &:hover {
+      background-color: $color-primary-10;
+      color: #ffffff;
+      border-color: $color-primary-10;
     }
 
-    &__ghost {
-  
-      /* box-sizing: border-box; */
-      text-decoration: none;
-  
+    &--width100 {
+      width: 100%;
+    }
+
+    &--widthfit {
+      width: fit-content;
+    }
+
+    &--space {
+      display: flex;
+      gap: $x;
+    }
+  }
+
+  &__ghost {
+    background-color: transparent;
+    box-sizing: border-box;
+    text-decoration: none;
+    border-radius: 2.5rem;
+    border-width: 0.125rem;
+    border-style: solid;
+    border-color: $neutral-light-00;
+    color: $neutral-light-00;
+
+    &:hover {
+      background-color: $neutral-light-00;
+      color: $color-primary-10;
+      border-color: $neutral-light-00;
+    }
+
+    &--small {
+      font-size: 14px;
+      font-weight: 500;
+      height: 32px;
+      padding: 0px 16px;
       border-radius: 2.5rem;
-      border-width: 0.125rem;
-      /* Cambiado de border-style a border-width */
+      border-width: 1px;
       border-style: solid;
-      /* Agregado border-style */
       border-color: $neutral-light-00;
       color: $neutral-light-00;
-  
+      
       &:hover {
         background-color: $neutral-light-00;
         color: $color-primary-10;
-        border-style:none;
-        
-      }
-
-      &--small {
-        font-size: 14px;
-        font-weight: 500;
-        height: 32px;
-        padding: 0px 16px;
-        border-radius: 2.5rem;
-      border-width: 1px;
-      /* Cambiado de border-style a border-width */
-      border-style: solid;
-      /* Agregado border-style */
-      border-color: $neutral-light-00;
-      color: $neutral-light-00;
-        &:hover {
-          background-color: $neutral-light-00;
-          color: $color-primary-10;
-          border-style:none;
-          
-        }
-      }
-  
-      &--width100 {
-        width: 100%;
-      }
-  
-      &--widthfit {
-        width: fit-content;
-      }
-
-      &--space {
-        display: flex;
-        gap: $x;
-        
+        border-color: $neutral-light-00;
       }
     }
+
+    &--width100 {
+      width: 100%;
+    }
+
+    &--widthfit {
+      width: fit-content;
+    }
+
+    &--space {
+      display: flex;
+      gap: $x;
+    }
+  }
 
   .logo-search {
     padding-right: $x;
