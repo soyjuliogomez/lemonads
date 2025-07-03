@@ -365,7 +365,7 @@ body {
       justify-content: space-between;
       align-items: center;
       margin-top: 5rem;
-      gap: 0;
+      
 
       @media (max-width: 600px) {
 
@@ -394,14 +394,15 @@ body {
         flex-direction: column;
         justify-content: baseline;
         align-items: flex-start;
+        width: 55%;
 
         text-align: left;
-        width: 680px;
+        /* width: 680px; */
 
 
 
 
-        padding: 56px; // espacio interno
+        /* padding: 56px; // espacio interno */
         position: relative;
         z-index: 2;
         /* margin-left: -56px; */
